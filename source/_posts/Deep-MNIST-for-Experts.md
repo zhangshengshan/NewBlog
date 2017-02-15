@@ -2,6 +2,7 @@
 title: Deep MNIST for Experts
 date: 2017-01-04 23:30:16
 tags: tensorflow
+categories: tensorflow
 ---
 
 

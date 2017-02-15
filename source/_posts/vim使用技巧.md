@@ -2,6 +2,7 @@
 title: vim使用技巧
 date: 2016-12-22 00:10:50
 tags: VIM
+categories: VIM
 ---
 
 
