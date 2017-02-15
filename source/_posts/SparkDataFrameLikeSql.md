@@ -3,6 +3,7 @@ title: SparkDataFrameLikeSql
 date: 2016-12-09 16:11:00
 tags: Spark DataFrame
 categories: Spark
+toc: true
 ---
 The idea of spark Datafame may be inspired from dataframe of pandas which is a package of python for structure data processing. On my opinion, dataframe can by prefered by the people with BI(business intelligence) background for high development efficiency.
 

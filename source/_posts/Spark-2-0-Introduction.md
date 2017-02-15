@@ -3,6 +3,7 @@ title: Spark 2.0 Introduction
 date: 2016-08-19 18:04:07
 tags: Spark
 categories: Spark
+toc: true
 ---
 
 # Spark 2.0 MLib Introduction #

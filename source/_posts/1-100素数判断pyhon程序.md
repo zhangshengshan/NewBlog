@@ -3,6 +3,7 @@ title: 1-100素数判断pyhon程序
 date: 2016-04-21 18:08:04
 tags: Python
 categories: Python
+toc: true
 ---
 
 

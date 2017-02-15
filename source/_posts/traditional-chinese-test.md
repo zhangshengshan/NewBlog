@@ -4,6 +4,7 @@ tags: 繁體
 categories: Test
 feature: /hexo-theme-freemind/images/xinjing/pusa1.jpg
 description: "观音心经 - 般若波罗蜜多心经。"
+toc: true
 ---
 
 觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。

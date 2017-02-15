@@ -3,6 +3,7 @@ title: install tensorflow
 date: 2016-12-28 15:04:08
 tags: tensorflow
 categories: tensorflow
+toc: true
 ---
 
 anaconda 提供了python科学计算的环境，为各种python软件包安装和管理提供了遍历，按照官方文档的方式即可以安装tensorflow. 

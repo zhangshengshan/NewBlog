@@ -3,6 +3,7 @@ title: ScalaList
 date: 2016-07-26 13:11:12
 tags: Scala
 categories: Scala
+toc: true
 ---
 Lists are not built in in Scala; they are defined by an abstract class List, **which comes with two subclasses for :: and Nil.**
 List 并不是Scala的内置类型。List被定义为抽象类。

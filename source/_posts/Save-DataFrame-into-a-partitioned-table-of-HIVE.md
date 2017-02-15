@@ -3,6 +3,7 @@ title: Save DataFrame into a partitioned table of HIVE
 date: 2016-08-19 17:15:15
 tags: Spark
 categories: Spark
+toc: true
 ---
 
 

@@ -3,6 +3,7 @@ title: Scala call-by-name call-by-value
 date: 2016-07-19 23:30:34
 tags: Scala
 categories: Scala
+toc: true
 ---
 Call-by-value has the advantage that it avoids repeated evaluation of arguments.
 Call-by-name has the advantage that it avoids evaluation of arguments when the

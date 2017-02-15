@@ -3,6 +3,7 @@ title: Homebrew_config_for_mac
 date: 2017-02-11 21:15:07
 tags:
 categories: Linux
+toc: true
 ---
 
 

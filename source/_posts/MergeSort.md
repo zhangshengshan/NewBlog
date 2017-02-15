@@ -2,6 +2,7 @@
 title: MergeSort
 date: 2016-07-26 20:30:03
 tags: Scala
+toc: true
 ---
 归并排序
 
