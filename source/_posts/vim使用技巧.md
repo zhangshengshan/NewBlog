@@ -16,11 +16,14 @@ DBCompleteViews
 ```
 此时在vim中输入表格名称时候可以通过ctrl+x 和 ctrl+k 来实现自动不全表名称的功能。
 
-
+```
 \slc
+```
 在table_name 上面停留光标然后执行\slc则可以获取到这个表格的各个字段名称, 按p则可粘贴
 
-\sh
+```
+**\sh**
+```
 查看执行的历史，在ResultBuffer中输入Enter则执行该命令
 
 
