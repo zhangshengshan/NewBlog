@@ -1,0 +1,642 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Page 6 | Zhangshengshan&#39;s Blog</title>
+  <meta name="author" content="Zhang ShengShan">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Zhangshengshan&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/paper.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+</head>
+
+ <body>  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Zhangshengshan&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header page-header-inverse ">
+  <h1 class="title title-inverse ">Blogs on machine learning for my baby Ruru</h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+      <i class="fa fa-heart"></i>
+      Yet another bootstrap theme.
+</div>    
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+        <!-- render top articles firstly -->
+        
+        <!-- render other articles -->
+        
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-19 </div>
+			<div class="article-title"><a href="/2016/08/19/Spark-2-0-Introduction/" >Spark 2.0 Introduction</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="Spark-2-0-MLib-Introduction"><a href="#Spark-2-0-MLib-Introduction" class="headerlink" title="Spark 2.0 MLib Introduction"></a>Spark 2.0 MLib Introduction</h1><p>As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered maintenance mode. The primary Machine Learning API for Spark is now the DataFrame-based API in the spark.ml package.</p>
+<p>Spark2.0 ,&#x5728;spark.mllib&#x4E2D;&#x7684;&#x57FA;&#x4E8E;RDD&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;APIs&#x5C06;&#x4F1A;&#x8FDB;&#x5165;&#x7EF4;&#x62A4;&#x6A21;&#x5F0F;&#x3002;&#x73B0;&#x5728;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x4E3B;&#x8981;&#x7684;API&#x57FA;&#x4E8E;DataFrame,&#x4F4D;&#x4E8E;spark.ml&#x4E2D;&#x3002;</p>
+<p>What are the implications?</p>
+<pre><code>MLlib will still support the RDD-based API in spark.mllib with bug fixes.
+MLlib will not add new features to the RDD-based API.
+In the Spark 2.x releases, MLlib will add features to the DataFrames-based API to reach feature parity with the RDD-based API.
+After reaching feature parity (roughly estimated for Spark 2.2), the RDD-based API will be deprecated.
+The RDD-based API is expected to be removed in Spark 3.0.
+</code></pre><p>Why is MLlib switching to the DataFrame-based API?</p>
+<pre><code>DataFrames provide a more user-friendly API than RDDs. The many benefits of DataFrames include Spark Datasources, SQL/DataFrame queries, Tungsten and Catalyst optimizations, and uniform APIs across languages.
+The DataFrame-based API for MLlib provides a uniform API across ML algorithms and across multiple languages.
+DataFrames facilitate practical ML Pipelines, particularly feature transformations. See the Pipelines guide for details.
+</code></pre>
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-19 </div>
+			<div class="article-title"><a href="/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/" >Save DataFrame into a partitioned table of HIVE</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table"><a href="#How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table" class="headerlink" title="How to save a spark DataFrame as a patitioned hive table"></a>How to save a spark DataFrame as a patitioned hive table</h1><h2 id="utilise-saveAsTable-method"><a href="#utilise-saveAsTable-method" class="headerlink" title="utilise saveAsTable method"></a>utilise saveAsTable method</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">val conf = new SparkConf().setAppName(&quot;Simple Application&quot;).setMaster(&quot;local&quot;)</div><div class="line">val sc = new SparkContext(conf)</div><div class="line">val sqlContext = new org.apache.spark.sql.SQLContext(sc)</div><div class="line">import sqlContext.implicits._</div><div class="line">val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)</div><div class="line">hiveContext.sql(&quot;use database&quot;)</div><div class="line"></div><div class="line">val cmd =</div><div class="line">  &quot;&quot;&quot;</div><div class="line">     select</div><div class="line">      col1,</div><div class="line">      col2</div><div class="line">     from</div><div class="line">      table</div><div class="line">  &quot;&quot;&quot;.stripMargin</div><div class="line">val yourDf = hiveContext.sql(cmd)</div><div class="line">yourDf.printSchema()</div><div class="line">yourDf.write.partitionBy(&quot;col2&quot;).saveAsTable(&quot;partitionTableName&quot;)</div></pre></td></tr></table></figure>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-11 </div>
+			<div class="article-title"><a href="/2016/08/11/SparkPassFunctions/" >SparkPassFunctions</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">class MyClass {</div><div class="line">  val field = &quot;Hello&quot;</div><div class="line">  def doStuff(rdd: RDD[String]): RDD[String] = {</div><div class="line">  val field_ = this.field</div><div class="line">  rdd.map(x =&gt; field_ + x)}</div><div class="line">}</div></pre></td></tr></table></figure>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-26 </div>
+			<div class="article-title"><a href="/2016/07/26/MergeSort/" >MergeSort</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>&#x5F52;&#x5E76;&#x6392;&#x5E8F;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">def msort[A](less: (A, A) =&gt; Boolean)(xs: List[A]): List[A] = { </div><div class="line">    def merge(xs1: List[A], xs2: List[A]): List[A] =</div><div class="line">        if (xs1.isEmpty) xs2</div><div class="line">        else if (xs2.isEmpty) xs1</div><div class="line">        else if (less(xs1.head, xs2.head)) xs1.head :: merge(xs1.tail, xs2) else xs2.head :: merge(xs1, xs2.tail)</div><div class="line">    val n = xs.length/2</div><div class="line">    if (n == 0) xs</div><div class="line">    else merge(msort(less)(xs take n), msort(less)(xs drop n))</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x4F60;&#x5BF9;python&#x5217;&#x8868;&#x7684;&#x7528;&#x6CD5;&#x6BD4;&#x8F83;&#x719F;&#x6089;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5982;&#x4E0B;&#x7684;&#x65B9;&#x5F0F;&#x7406;&#x89E3;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xs take n   // xs[0:n+1]</div><div class="line">xs drop n   // xs[n+1:]</div></pre></td></tr></table></figure>
+<p>msort&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x6309;&#x7167;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8C03;&#x7528;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">msort((x: Int, y: Int) =&gt; x &lt; y)(List(5, 7, 1, 3))</div></pre></td></tr></table></figure></p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-26 </div>
+			<div class="article-title"><a href="/2016/07/26/ScalaList/" >ScalaList</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Lists are not built in in Scala; they are defined by an abstract class List, <strong>which comes with two subclasses for :: and Nil.</strong><br>List &#x5E76;&#x4E0D;&#x662F;Scala&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x3002;List&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x62BD;&#x8C61;&#x7C7B;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">package scala</div><div class="line">abstract class List[+A] {</div></pre></td></tr></table></figure>
+<p>List is an abstract class, so one cannot define elements by calling the empty List constructor (e.g. by new List). The class has a type parameter a. It is co-variant in this parameter,which means thatList[S] &lt;: List[T] for all types S and T such thatS &lt;: T.The class is situated in the package scala.This is a package containing the most important standard classes of Scala. List defines a number of methods, which are explained in the following.<br>List &#x662F;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x901A;&#x8FC7;&#x7A7A;&#x7684;List&#x6784;&#x9020;&#x5668;&#x6765;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x3002;List&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x53C2;&#x6570;A&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x662F;&#x534F;&#x53D8;&#x7C7B;&#x578B;, &#x5BF9;&#x4E8E;&#x4EFB;&#x610F;&#x7C7B;&#x578B;S&#x548C;T&#xFF0C;&#x5982;&#x679C;S&lt;:T, &#x5219; List[S]&lt;:List[T]&#x3002;&#x8BE5;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5728;scala package&#x4E2D;&#x3002;&#x8FD9;&#x4E2A;&#x5305;&#x662F;Scala&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6807;&#x51C6;calsses&#x3002;</p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-19 </div>
+			<div class="article-title"><a href="/2016/07/19/Scala-call-by-name-call-by-value/" >Scala call-by-name call-by-value</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Call-by-value has the advantage that it avoids repeated evaluation of arguments.<br>Call-by-name has the advantage that it avoids evaluation of arguments when the<br>parameter is not used at all by the function. Call-by-value is usually more efficient<br>than call-by-name, but a call-by-value evaluation might loop where a call-by-name<br>evaluation would terminate. Consider:</p>
+<p>Call-by-value &#x7684;&#x4F18;&#x52BF;&#x5728;&#x4E8E;&#x907F;&#x514D;&#x4E0D;&#x65AD;&#x7684;&#x8BA1;&#x7B97;&#x53C2;&#x6570;&#x3002;&#x800C;call-by-name&#x7684;&#x4F18;&#x52BF;&#x5728;&#x4E8E;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6839;&#x672C;&#x5C31;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x8BA1;&#x7B97;&#xFF0C;&#x4E0E;call-by-value&#x6070;&#x597D;&#x76F8;&#x53CD;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x4E00;&#x4E2A;Call-by-value&#x4F1A;&#x4E0D;&#x505C;&#x5FAA;&#x73AF;&#x4F46;&#x662F;Call-by-name&#x4F1A;&#x505C;&#x6B62;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">scala&gt; def loop: Int = loop</div><div class="line">loop: Int</div><div class="line">scala&gt; def first(x: Int, y: Int) = x</div><div class="line">first: (Int,Int)Int</div></pre></td></tr></table></figure>
+<p>Then first(1, loop) reduces with call-by-name to 1, whereas the same term reduces with call-by-value repeatedly to itself, hence evaluation does not terminate.<br>first(1, loop)<br>&#x2192; first(1, loop)<br>&#x2192; first(1, loop)<br>&#x2192; &#x2026;<br>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x4E0D;&#x505C;&#x7684;&#x5FAA;&#x73AF;&#x7684;&#x539F;&#x56E0;&#x5C31;&#x662F;,y &#x88AB;&#x58F0;&#x660E;&#x4E3A; Call-by-value&#xFF0C;&#x56E0;&#x800C;&#xFF0C;&#x6309;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x8BF4;&#x6CD5;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x7528;&#x5230;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x90FD;&#x4F1A;&#x88AB;&#x8BA1;&#x7B97;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x4E0D;&#x505C;&#x7684;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>Scala uses call-by-value by default, but it switches to call-by-name evaluation if the<br>parameter type is preceded by =&gt;.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">scala&gt; def constOne(x: Int, y: =&gt; Int) = 1</div><div class="line">constOne: (Int,=&gt; Int)Int</div><div class="line">scala&gt; constOne(1, loop)</div><div class="line">unnamed0: Int = 1</div><div class="line">scala&gt; constOne(loop, 2) // gives an infinite loop.</div></pre></td></tr></table></figure></p>
+<p>constOne(1,loop) &#x4F1A;&#x505C;&#x6B62;&#xFF0C;y&#x88AB;&#x58F0;&#x660E;&#x4E3A;Call-by-name, &#x6240;&#x4EE5;&#x5F53;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;,&#x5219;&#x4E0D;&#x4F1A;&#x88AB;&#x8BA1;&#x7B97;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x9677;&#x5165;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#x3002;<br>constOne(loop,2) &#x5219;&#x6070;&#x597D;&#x76F8;&#x53CD;&#x3002;</p>
+<p>&#x672C;&#x6587;&#x793A;&#x4F8B; &#x6765;&#x81EA;&#x4E8E;  &#x300A;ScalaByExample&#x300B;,&#x611F;&#x8C22;&#x539F;&#x4F5C;&#x8005;&#x3002;</p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-13 </div>
+			<div class="article-title"><a href="/2016/07/13/机器学习相关材料/" >机器学习相关材料</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="&#x6570;&#x5B66;&#x57FA;&#x7840;"><a href="#&#x6570;&#x5B66;&#x57FA;&#x7840;" class="headerlink" title="&#x6570;&#x5B66;&#x57FA;&#x7840;"></a>&#x6570;&#x5B66;&#x57FA;&#x7840;</h1><ul>
+<li>1&#x3001;&#x5FAE;&#x79EF;&#x5206; <a href="http://v.163.com/special/sp/singlevariablecalculus.html" target="_blank" rel="external">http://v.163.com/special/sp/singlevariablecalculus.html</a>  <a href="http://open.163.com/special/opencourse/multivariable.html" target="_blank" rel="external">http://open.163.com/special/opencourse/multivariable.html</a></li>
+<li>2&#x3001;&#x7EBF;&#x6027;&#x4EE3;&#x6570; <a href="http://open.163.com/special/opencourse/daishu.html" target="_blank" rel="external">http://open.163.com/special/opencourse/daishu.html</a></li>
+<li>3&#x3001;&#x6982;&#x7387;&#x7EDF;&#x8BA1;<a href="http://open.163.com/special/Khan/probability.html" target="_blank" rel="external">http://open.163.com/special/Khan/probability.html</a><br>&#x60F3;&#x8981;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x673A;&#x5668;&#x5B66;&#x4E60;&#xFF0C;&#x9700;&#x8981;&#x5177;&#x6709;&#x624E;&#x5B9E;&#x7684;&#x6570;&#x5B66;&#x57FA;&#x7840;&#xFF08;&#x77E9;&#x9635;&#x5206;&#x6790;&#x548C;&#x6982;&#x7387;&#x7EDF;&#x8BA1;&#x662F;&#x57FA;&#x7840;&#x7684;&#x7406;&#x8BBA;&#xFF09;</li>
+</ul>
+<h1 id="&#x8FDB;&#x9636;&#x7248;&#x672C;&#x6570;&#x5B66;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;"><a href="#&#x8FDB;&#x9636;&#x7248;&#x672C;&#x6570;&#x5B66;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;" class="headerlink" title="&#x8FDB;&#x9636;&#x7248;&#x672C;&#x6570;&#x5B66;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;"></a>&#x8FDB;&#x9636;&#x7248;&#x672C;&#x6570;&#x5B66;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;</h1><ul>
+<li>1&#x3001;&#x6700;&#x4F18;&#x5316;&#x7406;&#x8BBA;&#xFF08;&#x91CD;&#x70B9;&#x51F8;&#x4F18;&#x5316;&#x7406;&#x8BBA;&#xFF09;  <a href="http://stanford.edu/~boyd/cvxbook/" target="_blank" rel="external">http://stanford.edu/~boyd/cvxbook/</a>   <a href="http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian" target="_blank" rel="external">http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian</a></li>
+<li>2&#x3001;&#x65F6;&#x53D8;&#x51FD;&#x6570;&#x4E0E;&#x6CDB;&#x51FD;&#x5206;&#x6790; <a href="http://ocw.nctu.edu.tw/course_list.php?page=2&amp;bgid=1&amp;gid=1" target="_blank" rel="external">http://ocw.nctu.edu.tw/course_list.php?page=2&amp;bgid=1&amp;gid=1</a>  <a href="http://open.163.com/special/opencourse/fanhanfenxi.html" target="_blank" rel="external">http://open.163.com/special/opencourse/fanhanfenxi.html</a></li>
+<li>3&#x3001;&#x968F;&#x673A;&#x8FC7;&#x7A0B; Hyperlink: Stochastic Process MIT View the complete course: Discrete Stochastic Processes</li>
+</ul>
+<h1 id="&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;"><a href="#&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;" class="headerlink" title="&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;"></a>&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;</h1><ul>
+<li>1&#x3001;Coursera&#x4E0A;Andrew Ng Andrew Ng&#x7684;&#x300A;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x300B;</li>
+<li>2&#x3001;&#x6797;&#x8ED2;&#x7530;(&#x56FD;&#x7ACB;&#x53F0;&#x6E7E;&#x5927;&#x5B66;) &#x6A5F;&#x5668;&#x5B78;&#x7FD2;&#x57FA;&#x77F3;</li>
+</ul>
+<h1 id="&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;-1"><a href="#&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;-1" class="headerlink" title="&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;"></a>&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x8BFE;&#x7A0B;</h1><ul>
+<li>1&#x3001; &#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x300B;&#x674E;&#x822A;</li>
+<li>2&#x3001; &#x300A;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x5BFC;&#x8BBA;&#x300B;</li>
+<li>3&#x3001; &#x300A;PRML&#x300B;</li>
+<li>4&#x3001; &#x300A;&#x56FE;&#x89E3;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x300B;[&#x65E5;]&#x6749;&#x5C71;&#x5C06;</li>
+<li>5&#x3001;   Machine Learning: A Probabilistic Prespective &#xFF08;Kevin Murphy&#xFF09;</li>
+<li>6&#x3001;   Pattern Recognition and Machine Learning &#xFF08;Christopher Bishop&#xFF09;</li>
+<li>7&#x3001; &#x300A;Spark&#x673A;&#x5668;&#x5B66;&#x4E60;&#x300B;</li>
+<li>8&#x3001; &#x300A;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x5B9E;&#x6218;&#x300B;</li>
+<li>9&#x3001; &#x300A;&#x8D1D;&#x53F6;&#x65AF;&#x601D;&#x7EF4;:&#x7EDF;&#x8BA1;&#x5EFA;&#x6A21;&#x7684;Python&#x5B66;&#x4E60;&#x6CD5;&#x300B;</li>
+<li>10&#x3001;Python&#x81EA;&#x7136;&#x8BED;&#x8A00;&#x5904;&#x7406;&#x300B;</li>
+<li>11&#x3001;&#x6570;&#x5B66;&#x4E4B;&#x7F8E; &#xFF08;&#x5434;&#x519B;&#xFF09;</li>
+<li>12&#x3001;Web&#x667A;&#x80FD;&#x7B97;&#x6CD5; &#xFF08;Haralambos Marmanis, Dmitry Babenko&#xFF09;</li>
+<li>13&#x3001;&#x96C6;&#x4F53;&#x667A;&#x6167;&#x7F16;&#x7A0B; &#xFF08;Toby Segaran&#xFF09;</li>
+<li>14&#x3001;&#x63A8;&#x8350;&#x7CFB;&#x7EDF;&#x5B9E;&#x8DF5;</li>
+<li>15&#x3001;&#x8BA1;&#x7B97;&#x5E7F;&#x544A;&#x5B66;</li>
+</ul>
+<h1 id="&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#xFF08;&#x6CE8;&#x5B9A;&#x5C06;&#x6210;&#x4E3A;&#x6700;&#x8FD1;&#x51E0;&#x5E74;&#x7684;&#x7206;&#x53D1;&#x5F0F;&#x589E;&#x957F;&#xFF09;"><a href="#&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#xFF08;&#x6CE8;&#x5B9A;&#x5C06;&#x6210;&#x4E3A;&#x6700;&#x8FD1;&#x51E0;&#x5E74;&#x7684;&#x7206;&#x53D1;&#x5F0F;&#x589E;&#x957F;&#xFF09;" class="headerlink" title="&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#xFF08;&#x6CE8;&#x5B9A;&#x5C06;&#x6210;&#x4E3A;&#x6700;&#x8FD1;&#x51E0;&#x5E74;&#x7684;&#x7206;&#x53D1;&#x5F0F;&#x589E;&#x957F;&#xFF09;"></a>&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#xFF08;&#x6CE8;&#x5B9A;&#x5C06;&#x6210;&#x4E3A;&#x6700;&#x8FD1;&#x51E0;&#x5E74;&#x7684;&#x7206;&#x53D1;&#x5F0F;&#x589E;&#x957F;&#xFF09;</h1><ul>
+<li>1&#x3001;&#x300A;Deep Learning&#x300B;<a href="http://www.deeplearningbook.org" target="_blank" rel="external">http://www.deeplearningbook.org</a></li>
+<li>2&#x3001;  CSDN Blog <a href="http://blog.csdn.net/zouxy09/article/details/8775360" target="_blank" rel="external">http://blog.csdn.net/zouxy09/article/details/8775360</a></li>
+<li>3&#x3001;&#x300A;&#x65AF;&#x5766;&#x798F;&#x5927;&#x5B66;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6559;&#x7A0B;&#x300B;<a href="http://ufldl.stanford.edu/tutorial" target="_blank" rel="external">http://ufldl.stanford.edu/tutorial</a></li>
+</ul>
+<h1 id="&#x6742;&#x9879;"><a href="#&#x6742;&#x9879;" class="headerlink" title="&#x6742;&#x9879;"></a>&#x6742;&#x9879;</h1><p><a href="http://blog.echen.me/2011/04/27/choosing-a-machine-learning-classifier/" target="_blank" rel="external">&#x300A;Choosing a Machine Learning Classifier&#x300B;</a><br><a href="https://www.toptal.com/machine-learning/an-introduction-to-deep-learning-from-perceptrons-to-deep-networks" target="_blank" rel="external">&#x300A;An Introduction to Deep Learning: From Perceptrons to Deep Networks&#x300B;</a>  <a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html" target="_blank" rel="external">&#x8BD1;&#x6587;</a><br><a href="http://vdisk.weibo.com/s/ayG13we2vxyKl" target="_blank" rel="external">&#x300A;The LION Way: Machine Learning plus Intelligent Optimization&#x300B;</a><br><a href="http://web.stanford.edu/group/pdplab/pdphandbook" target="_blank" rel="external">&#x300A;&#x5206;&#x5E03;&#x5F0F;&#x5E76;&#x884C;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x300B;</a><br><a href="https://www.microsoft.com/en-us/research/publication/deep-learning-for-natural-language-processing-and-related-applications-tutorial-at-icassp/" target="_blank" rel="external">&#x300A;Deep Learning for Natural Language Processing and Related Applications&#x300B;</a><br><a href="http://neuralnetworksanddeeplearning.com/index.html" target="_blank" rel="external">&#x300A;Neural Networks and Deep Learning&#x300B;</a><br><a href="http://cxwangyi.github.io/notes/2014-01-20-distributed-machine-learning.html" target="_blank" rel="external">&#x300A;&#x5206;&#x5E03;&#x5F0F;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x6545;&#x4E8B;&#x300B;</a><br><a href="http://markus.com/deep-learning-101/" target="_blank" rel="external">&#x300A;Deep Learning 101&#x300B;</a><br><a href="https://metacademy.org/roadmaps/rgrosse/deep_learning" target="_blank" rel="external">&#x300A;Deep learning from the bottom up&#x300B;</a><br><a href="http://blog.csdn.net/zouxy09/article/details/8775360" target="_blank" rel="external">&#x300A;Deep Learning&#xFF08;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#xFF09;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x6574;&#x7406;&#x7CFB;&#x5217;&#x300B;</a><br><a href="http://www.seobythesea.com/2014/09/google-turns-deep-learning-classification-fight-web-spam/" target="_blank" rel="external">&#x300A;Google Turns To Deep Learning Classification To Fight Web Spam&#x300B;</a><br><a href="http://neo4j.com/blog/deep-learning-sentiment-analysis-movie-reviews-using-neo4j/" target="_blank" rel="external">&#x300A;Deep Learning Sentiment Analysis for Movie Reviews using Neo4j&#x300B;</a><br><a href="http://emnlp2014.org/papers/pdf/EMNLP2014148.pdf" target="_blank" rel="external">&#x300A;EMNLP&#x4E0A;&#x4E24;&#x7BC7;&#x5173;&#x4E8E;&#x80A1;&#x7968;&#x8D8B;&#x52BF;&#x7684;&#x5E94;&#x7528;&#x8BBA;&#x6587; &#x300B;</a><br><a href="http://www.morganclaypool.com/doi/abs/10.2200/S00607ED2V01Y201410HLT026" target="_blank" rel="external">&#x300A;Learning to Rank for Information Retrieval and Natural Language Processing&#x300B;</a><br><a href="http://www.cs.toronto.edu/~hinton/" target="_blank" rel="external">&#x300A;Geoffrey E. Hinton&#x300B;</a><br><a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/rldemo.html" target="_blank" rel="external">&#x300A;Andrej Karpathy&#x7684;&#x6DF1;&#x5EA6;&#x5F3A;&#x5316;&#x5B66;&#x4E60;&#x6F14;&#x793A;&#x300B; &#x8BBA;&#x6587;&#x5728;&#x8FD9;&#x91CC;</a><br><a href="http://eugenezhulenev.com/blog/2014/11/14/stock-price-prediction-with-big-data-and-machine-learning/" target="_blank" rel="external">&#x300A;&#x7528;&#x5927;&#x6570;&#x636E;&#x548C;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x505A;&#x80A1;&#x7968;&#x4EF7;&#x683C;&#x9884;&#x6D4B;&#x300B;</a><br><a href="https://www.kaggle.com/c/word2vec-nlp-tutorial" target="_blank" rel="external">&#x300A;Use Google&#x2019;s Word2Vec for movie reviews&#x300B;</a><br><a href="https://www.technologyreview.com/s/533496/why-neural-networks-look-set-to-thrash-the-best-human-go-players-for-the-first-time/" target="_blank" rel="external">&#x300A;&#x6DF1;&#x5EA6;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E0B;&#x56F4;&#x68CB;&#x300B;</a><br><a href="http://blog.csdn.net/suipingsp/article/details/42101139" target="_blank" rel="external">&#x300A;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7ECF;&#x5178;&#x7B97;&#x6CD5;&#x8BE6;&#x89E3;&#x53CA;Python&#x5B9E;&#x73B0;&#x2013;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#xFF08;Linear Regression&#xFF09;&#x7B97;&#x6CD5;&#x300B;</a><br><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">&#x300A;Caffe&#x300B;</a><br><a href="https://github.com/BVLC/caffe/blob/master/models/bvlc_googlenet/readme.md" target="_blank" rel="external">&#x300A;GoogLeNet&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x7684;Caffe&#x590D;&#x73B0; &#x300B; GoogleNet&#x8BBA;&#x6587;</a><br><a href="http://techblog.youdao.com/?p=915" target="_blank" rel="external">&#x300A;Deep Learning&#x5B9E;&#x6218;&#x4E4B;word2vec&#x300B;</a><br><a href="http://nikhilbuduma.com/2015/01/11/a-deep-dive-into-recurrent-neural-networks/" target="_blank" rel="external">&#x300A;A Deep Dive into Recurrent Neural Nets&#x300B;</a><br><a href="http://www.cs.toronto.edu/~hinton/" target="_blank" rel="external">&#x300A;Geoffrey E. Hinton&#x4E2A;&#x4EBA;&#x4E3B;&#x9875;&#x300B;</a><br><a href="https://www.paypal-engineering.com/2015/01/12/deep-learning-on-hadoop-2-0-2/" target="_blank" rel="external">&#x300A;Deep Learning on Hadoop 2.0&#x300B;</a><br><a href="http://tech.meituan.com/mt-recommend-practice.html" target="_blank" rel="external">&#x300A;&#x7F8E;&#x56E2;&#x63A8;&#x8350;&#x7B97;&#x6CD5;&#x5B9E;&#x8DF5;&#x300B;</a><br><a href="http://v1v3kn.tumblr.com/post/47193952400/the-trouble-with-svms" target="_blank" rel="external">&#x300A;The Trouble with SVMs&#x300B;</a><br><a href="http://www.gaussianprocess.org/gpml/" target="_blank" rel="external">&#x300A;Gaussian Processes for Machine Learning&#x300B;</a><br><a href="http://www.analyticsvidhya.com/blog/2015/03/introduction-auto-regression-moving-average-time-series/" target="_blank" rel="external">&#x300A;Introduction to ARMA Time Series Models &#x2013; simplified&#x300B;</a><br><a href="https://vimeo.com/19569529" target="_blank" rel="external">&#x300A;Neural Net in C++ Tutorial&#x300B;</a><br><a href="http://deeplearning.net/tutorial/" target="_blank" rel="external">&#x300A;Deep Learning Tutorials&#x300B;</a><br><a href="http://www.kdnuggets.com/2015/03/deep-learning-curse-dimensionality-autoencoders.html" target="_blank" rel="external">&#x300A;Deep Learning, The Curse of Dimensionality, and Autoencoders&#x300B;</a><br><a href="https://databricks.com/blog/2015/03/25/topic-modeling-with-lda-mllib-meets-graphx.html" target="_blank" rel="external">&#x300A;Topic modeling with LDA: MLlib meets GraphX&#x300B;</a><br><a href="https://arxiv.org/abs/1502.05988" target="_blank" rel="external">&#x300A;Deep Learning for Multi-label Classification&#x300B;</a><br><a href="https://deepmind.com/research/publications/" target="_blank" rel="external">&#x300A;Google DeepMind publications&#x300B;  AlphaGo&#x56E2;&#x961F;&#x5B98;&#x65B9;&#x8BBA;&#x6587;</a><br><a href="http://am207.org/" target="_blank" rel="external">&#x300A;AM207: Monte Carlo Methods, Stochastic Optimization&#x300B;</a><br><a href="http://www.allthingsdistributed.com/2015/04/machine-learning.html" target="_blank" rel="external">&#x300A;Back-to-Basics Weekend Reading - Machine Learning&#x300B;</a><br><a href="https://arxiv.org/abs/1504.00641" target="_blank" rel="external">&#x300A;A Probabilistic Theory of Deep Learning&#x300B;</a><br><a href="http://www.quora.com/How-does-Quora-use-machine-learning-in-2015/answer/Xavier-Amatriain" target="_blank" rel="external">&#x300A;How does Quora use machine learning in 2015?&#x300B;</a><br><a href="https://github.com/ogrisel/parallel_ml_tutorial" target="_blank" rel="external">&#x300A;Parallel Machine Learning with scikit-learn and IPython&#x300B;</a><br><a href="http://www.ssc.upenn.edu/~fdiebold/Teaching706/econ706Penn.html" target="_blank" rel="external">&#x300A;Time Series Econometrics - A Concise Course&#x300B;</a><br><a href="http://fotiad.is/blog/sentiment-analysis-comparison/" target="_blank" rel="external">&#x300A;A comparison of open source tools for sentiment analysis&#x300B;</a><br><a href="http://ijcai-15.org/index.php/accepted-papers" target="_blank" rel="external">&#x300A;International Joint Conference on Artificial Intelligence Accepted paper&#x300B;</a><br><a href="https://declara.com/content/21bO33gn" target="_blank" rel="external">&#x300A;How to Evaluate Machine Learning Models, Part 1: Orientation&#x300B;</a><br><a href="http://nbviewer.jupyter.org/github/gmonce/scikit-learn-book/tree/master/" target="_blank" rel="external">&#x300A;Learning scikit-learn: Machine Learning in Python&#x300B;</a><br><a href="https://speakerdeck.com/nivdul/lightning-fast-machine-learning-with-spark" target="_blank" rel="external">&#x300A;Lightning fast Machine Learning with Spark&#x300B;</a><br><a href="http://blog.wepay.com/how-were-using-machine-learning-to-fight-shell-selling/" target="_blank" rel="external">&#x300A;How we&#x2019;re using machine learning to fight shell selling&#x300B;</a><br><a href="http://www.mmds.org/" target="_blank" rel="external">&#x300A;Mining of Massive Datasets&#x300B;</a><br><a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/15585/isbn9789526061498.pdf" target="_blank" rel="external">&#x300A;Advances in Extreme Learning Machines&#x300B;</a><br><a href="http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/" target="_blank" rel="external">&#x300A;The Curse of Dimensionality in classification&#x300B;</a><br><a href="http://blog.terminal.com/demistifying-long-short-term-memory-lstm-recurrent-neural-networks/" target="_blank" rel="external">&#x300A;Demistifying LSTM Neural Networks&#x300B;</a><br><a href="http://bigdata-madesimple.com/decoding-dimensionality-reduction-pca-and-svd/" target="_blank" rel="external">&#x300A;Decoding Dimensionality Reduction, PCA and SVD&#x300B;</a><br><a href="https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms/answer/Xavier-Amatriain" target="_blank" rel="external">&#x300A;What are the advantages of different classification algorithms?&#x300B;</a><br><a href="https://www.datacamp.com/courses/kaggle-tutorial-on-machine-learing-the-sinking-of-the-titanic" target="_blank" rel="external">&#x300A;Kaggle R Tutorial on Machine Learning&#x300B; &#x300A;Interactive R Tutorial: Machine Learning for the Titanic Competition&#x300B;.</a><br><a href="http://nbviewer.jupyter.org/github/tfolkman/learningwithdata/blob/master/Logistic%20Gradient%20Descent.ipynb" target="_blank" rel="external">&#x300A;Logistic Regression and Gradient Descent&#x300B;</a><br><a href="http://www.anlytcs.com/2015/05/stock-forecasting-with-machine-learning.html" target="_blank" rel="external">&#x300A;Stock Forecasting With Machine Learning - Seven Possible Errors&#x300B;</a><br><a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html" target="_blank" rel="external">&#x300A;LR&#x539F;&#x7406;&#x89E3;&#x6790;&#x300B;</a><br><a href="http://icml.cc/2015/?page_id=175" target="_blank" rel="external">&#x300A;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x9876;&#x7EA7;&#x4F1A;&#x8BAE;&#x548C;&#x6742;&#x5FD7;&#x300B;</a><br><a href="http://blog.csdn.net/haoni123321/article/details/37913795" target="_blank" rel="external">&#x300A;&#x8D1D;&#x8036;&#x65AF;&#x56DE;&#x5F52;&#x6750;&#x6599;&#x300B;</a><br><a href="http://mindhacks.cn/2008/09/21/the-magical-bayesian-method" target="_blank" rel="external">&#x300A;&#x8D1D;&#x8036;&#x65AF;&#x56DE;&#x5F52;&#x6750;&#x6599;&#x300B;</a><br><a href="https://www.youtube.com/watch?v=63FDxJ5e_Ew" target="_blank" rel="external">&#x300A;alphaGo&#x539F;&#x7406;&#x89E3;&#x6790;&#x300B;</a><br><a href="https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner&apos;s-Guide-To-Understanding-Convolutional-Neural-Networks/" target="_blank" rel="external">&#x300A;&#x7406;&#x89E3;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x6587;&#x7AE0;&#x300B;</a><br><a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="external">&#x300A;Neural Networks and Deep Learning&#x300B;</a><br><a href="https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/" target="_blank" rel="external"> &#x901A;&#x4FD7;&#x6613;&#x61C2;&#x4ECB;&#x7ECD;CNN </a><br><a href="http://cs231n.github.io/" target="_blank" rel="external"> CS231n Convolutional Neural Networks for Visual Recognition </a></p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-13 </div>
+			<div class="article-title"><a href="/2016/07/13/过拟合的原因/" >过拟合的原因</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;"><a href="#&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;" class="headerlink" title="&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;"></a>&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;</h1><h2 id="&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;"><a href="#&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;" class="headerlink" title="&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;"></a>&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;</h2><p>&#x7528;&#x4E8E;&#x8BAD;&#x7EC3;&#x7684;&#x6837;&#x672C;&#x6570;&#x636E;&#xFF0C;&#x5373;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x56E0;&#x4E3A;&#x5404;&#x79CD;&#x4E2A;&#x6837;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x603B;&#x4F1A;&#x4EA7;&#x751F;&#x8BEF;&#x5DEE;&#x3002;&#x5982;&#x679C;&#x9009;&#x62E9;&#x7684;&#x5047;&#x8BBE;&#x8FC7;&#x5206;&#x8FFD;&#x6C42;&#x80FD;&#x591F;&#x5B8C;&#x7F8E;&#x89E3;&#x91CA;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#xFF08;&#x5BF9;&#x4E8E;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x62DF;&#x5408;&#x66F2;&#x7EBF;&#x201C;&#x7A7F;&#x8FC7;&#x201D;&#x6240;&#x6709;&#x7684;&#x6837;&#x672C;&#x70B9;&#xFF0C;&#x6216;&#x8005;&#x7C7B;&#x4F3C;&#x4E8E;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x8FC7;&#x5C0F;&#xFF09;&#xFF0C;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x8FC7;&#x62DF;&#x5408;&#x7684;&#x73B0;&#x8C61;&#x3002;&#x9020;&#x6210;&#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x7684;&#x6839;&#x672C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF0C;&#x62DF;&#x5408;&#x66F2;&#x7EBF;&#x628A;&#x8BEF;&#x5DEE;&#x4E5F;&#x5B8C;&#x7F8E;&#x7684;&#x5B66;&#x4E60;&#x4E86;&#x3002;</p>
+<h2 id="&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;"><a href="#&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;" class="headerlink" title="&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;"></a>&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;</h2><p>&#x5F71;&#x54CD;&#x4EA7;&#x751F;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x7684;&#x56E0;&#x7D20;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x73B0;&#x5B9E;&#x4E2D;&#x53EF;&#x80FD;&#x4EC5;&#x63D0;&#x53D6;&#x51E0;&#x4E2A;&#x548C;&#x7ED3;&#x679C;&#x76F8;&#x5173;&#x5EA6;&#x5F88;&#x9AD8;&#x7684;&#x56E0;&#x7D20;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x4F1A;&#x503E;&#x5411;&#x4E8E;&#x56F4;&#x7ED5;&#x4F60;&#x7684;&#x6709;&#x9650;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x5448;&#x6B63;&#x6001;&#x5206;&#x5E03;&#xFF0C;&#x4E8E;&#x662F;&#x4F60;&#x5B9E;&#x9645;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x53D6;&#x6837;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D6;&#x6837;&#x5F88;&#x53EF;&#x80FD;&#x53D7;&#x5230;&#x5176;&#x4F59;&#x56E0;&#x7D20;&#x7684;&#x5F71;&#x54CD;&#x504F;&#x79BB;&#x4F60;&#x7684;&#x6A21;&#x578B;&#x6240;&#x9884;&#x6D4B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4FBF;&#x4E0D;&#x80FD;&#x8D2A;&#x5FC3;&#x4E0D;&#x8DB3;&#x5730;&#x8BD5;&#x56FE;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x6A21;&#x578B;&#x6765;&#x201C;&#x5B8C;&#x7F8E;&#x201D;&#x5339;&#x914D;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x90A3;&#x4E9B;&#x4F7F;&#x7ED3;&#x679C;&#x504F;&#x79BB;&#x4F60;&#x7684;&#x9884;&#x6D4B;&#x7684;&#x8D21;&#x732E;&#x56E0;&#x7D20;&#x4E0D;&#x662F;&#x4F60;&#x8FD9;&#x4E2A;&#x6709;&#x9650;&#x6A21;&#x578B;&#x91CC;&#x9762;&#x542B;&#x6709;&#x7684;&#x56E0;&#x7D20;&#x6240;&#x80FD;&#x6982;&#x62EC;&#x7684;&#xFF0C;&#x786C;&#x8981;&#x6253;&#x80BF;&#x8138;&#x5145;&#x80D6;&#x5B50;&#x53EA;&#x80FD;&#x5BFC;&#x81F4;&#x4E0D;&#x5B9E;&#x9645;&#x7684;&#x6A21;&#x578B;&#x3002;</p>
+<h2 id="&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;"><a href="#&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;" class="headerlink" title="&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;"></a>&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;</h2><p>$$<br>p\left( h|D\right )   = p\left( h\right ) p\left( D|h\right )<br>$$<br>&#x9AD8;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x7684;&#x542B;&#x4E49;&#x662F;&#x5982;&#x679C;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x5047;&#x8BBE;&#x548C;&#x89C2;&#x5BDF;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x5E94;&#x5F53;&#x9009;&#x62E9;&#x6700;&#x7B80;&#x5355;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5047;&#x8BBE;&#x610F;&#x5473;&#x7740;$\left( h\right)$&#x8F83;&#x5927;&#xFF0C;&#x800C;&#x4E0E;&#x89C2;&#x6D4B;&#x4E00;&#x81F4;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4F3C;&#x7136;&#x6570;&#x503C;&#x8F83;&#x5927;&#xFF0C;&#x5373;$p\left( D|h\right )$&#x8F83;&#x5927;&#x3002;</p>
+<p>&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x9752;&#x7750;&#x4E8E;&#x5148;&#x9A8C;&#x6982;&#x7387;&#xFF0C;&#x8BA4;&#x4E3A;&#x5148;&#x9A8C;&#x8F83;&#x5927;&#x7684;&#x6A21;&#x578B;&#x6709;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x52BF;&#xFF1B;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x6CD5;&#x5219;&#x8BA4;&#x4E3A;&#x4F3C;&#x7136;&#x5927;&#x7684;&#x6A21;&#x578B;&#x5177;&#x6709;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x52BF;&#xFF1B;&#x800C;&#x8D1D;&#x53F6;&#x65AF;&#x6CD5;&#x5219;&#x5219;&#x8BA4;&#x4E3A;&#x4E8C;&#x8005;&#x4E58;&#x79EF;&#x51B3;&#x5B9A;&#x6A21;&#x578B;&#x7684;&#x9009;&#x62E9;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;"><a href="#&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;" class="headerlink" title="&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;"></a>&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;</h2><p>&#x4E0A;&#x9762;&#x7684;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x4F20;&#x7EDF;&#x7684;&#x5243;&#x5200;&#x6CD5;&#x5219;&#xFF0C;&#x4E3B;&#x8981;&#x6307;&#x5148;&#x9A8C;&#x6982;&#x7387;$\left( h\right)$,&#x800C;&#x8D1D;&#x53F6;&#x65AF;&#x6CD5;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5176;&#x5B9E;&#x548C;&#x4F3C;&#x7136;$p\left( D|h\right )$&#x4E0A;&#x9762;&#xFF0C;&#x5373;&#x8BE5;&#x6CD5;&#x5219;&#x4E3B;&#x8981;&#x8861;&#x91CF;&#x7684;&#x56E0;&#x7D20;&#x662F;&#x4F3C;&#x7136;&#x672C;&#x8EAB;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x5927;&#x5C0F;&#x3002; </p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-25 </div>
+			<div class="article-title"><a href="/2016/04/25/SPARK的宽依赖和窄依赖/" >SPARK的宽依赖和窄依赖</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>spark &#x7684;&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;transformation&#x64CD;&#x4F5C;,&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x662F;&#x5426;&#x4F9D;&#x8D56;&#x7236;RDDs&#x7684;&#x6240;&#x6709;partision&#x5206;&#x4E3A;&#x2018;&#x7A84;&#x4F9D;&#x8D56;&#x2019;&#x548C;&#x2018;&#x5BBD;&#x4F9D;&#x8D56;&#x2019;,&#x7B80;&#x5355;&#x7684;&#x8BF4;,&#x6709;shuffle&#x64CD;&#x4F5C;&#x7684;&#x5C31;&#x662F;&#x5BBD;&#x4F9D;&#x8D56;,&#x800C;&#x6CA1;&#x6709;shuffle&#x64CD;&#x4F5C;&#x7684;&#x5C31;&#x662F;&#x7A84;&#x4F9D;&#x8D56;&#x3002;<br>&#x5BF9;&#x4E8E;&#x7A84;&#x4F9D;&#x8D56;,spark&#x4F1A;&#x5C3D;&#x91CF;&#x5C06;&#x4ED6;&#x4EEC;&#x5212;&#x5206;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;stage,&#x800C;&#x5BBD;&#x4F9D;&#x8D56;&#x5219;&#x4F1A;&#x79F0;&#x4E3A;&#x53E6;&#x5916;&#x7684;stage&#x3002;</p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-21 </div>
+			<div class="article-title"><a href="/2016/04/21/1-100素数判断pyhon程序/" >1-100素数判断pyhon程序</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>&#x6C42;&#x53D6;1-100&#x7684;&#x6240;&#x6709;&#x7D20;&#x6570;&#xFF0C;&#x91C7;&#x7528;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">issu</span><span class="params">(x)</span>:</span></div><div class="line">    result=map(<span class="keyword">lambda</span> y:x%y,range(<span class="number">2</span>,x))</div><div class="line">    <span class="keyword">if</span>  len(result)!=<span class="number">0</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">in</span> result:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">print</span> filter(issu,range(<span class="number">1</span>,<span class="number">101</span>))</div></pre></td></tr></table></figure></p>
+<p>&#x7B54;&#x6848;&#x4E3A;<br><strong>[3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]</strong></p>
+
+	
+	</div>
+</div>
+
+           
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+<ul class="pagination">
+	 
+		
+    	<li class="prev"><a href="/page/5/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i> Prev</a></li>
+  		
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+		   <li class="next"> <a href="/page/7/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
+</ul>
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+	<div class="widget">
+		<h4>Categories</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/C-C/">C/C++<span>4</span></a></li>
+		
+			<li><a href="/categories/Demo/">Demo<span>1</span></a></li>
+		
+			<li><a href="/categories/Docs/">Docs<span>4</span></a></li>
+		
+			<li><a href="/categories/Linux/">Linux<span>1</span></a></li>
+		
+			<li><a href="/categories/MachineLearning/">MachineLearning<span>2</span></a></li>
+		
+			<li><a href="/categories/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/categories/Scala/">Scala<span>2</span></a></li>
+		
+			<li><a href="/categories/Spark/">Spark<span>8</span></a></li>
+		
+			<li><a href="/categories/Test/">Test<span>3</span></a></li>
+		
+			<li><a href="/categories/VIM/">VIM<span>1</span></a></li>
+		
+			<li><a href="/categories/tensorflow/">tensorflow<span>2</span></a></li>
+		
+			<li><a href="/categories/学习/">学习<span>2</span></a></li>
+		
+		</ul>
+	</div>
+
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
+			<li><a href="/tags/plugins/">plugins<span>2</span></a></li>
+		
+			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
+		
+			<li><a href="/tags/scala/">scala<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
+		
+			<li><a href="/tags/highlight/">highlight<span>1</span></a></li>
+		
+			<li><a href="/tags/tensorflow/">tensorflow<span>3</span></a></li>
+		
+			<li><a href="/tags/ML/">ML<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/繁體/">繁體<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/Q-A/">Q&amp;A<span>2</span></a></li>
+		
+			<li><a href="/tags/JVM-GC/">JVM,GC<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala/">Scala<span>8</span></a></li>
+		
+			<li><a href="/tags/Spark/">Spark<span>5</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+			<li><a href="/tags/CNN/">CNN<span>1</span></a></li>
+		
+			<li><a href="/tags/Flink/">Flink<span>1</span></a></li>
+		
+			<li><a href="/tags/maven/">maven<span>1</span></a></li>
+		
+			<li><a href="/tags/maven-gradle/">maven gradle<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>31</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2019/09/04/gradel2maven/" ><i class="fa fa-file-o"></i>gradel2maven</a>
+      </li>
+    
+      <li>
+        <a href="/2019/08/06/ScalaTest/" ><i class="fa fa-file-o"></i>ScalaTest</a>
+      </li>
+    
+      <li>
+        <a href="/2019/07/25/通俗语言解释Monad-1/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
+      </li>
+    
+      <li>
+        <a href="/2019/07/25/通俗语言解释Monad/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
+      </li>
+    
+      <li>
+        <a href="/2019/07/10/FpInScala读书笔记/" ><i class="fa fa-file-o"></i>FpInScala读书笔记</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/zhangshengshan" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/hahack" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2019 Zhang ShengShan
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+   </html>

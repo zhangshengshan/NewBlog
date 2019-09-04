@@ -1,0 +1,6 @@
+{"name":"hexo","hostname":"zss","pid":1509,"level":20,"msg":"Hexo version: \u001b[35m3.2.2\u001b[39m","time":"2018-02-20T04:54:03.609Z","v":0}
+{"name":"hexo","hostname":"zss","pid":1509,"level":20,"msg":"Working directory: \u001b[35m~/MyBlog/\u001b[39m","time":"2018-02-20T04:54:03.612Z","v":0}
+{"name":"hexo","hostname":"zss","pid":1509,"level":20,"msg":"Config loaded: \u001b[35m~/MyBlog/_config.yml\u001b[39m","time":"2018-02-20T04:54:03.711Z","v":0}
+{"name":"hexo","hostname":"zss","pid":1509,"level":30,"msg":"[hexo-math] Using engine 'mathjax'","time":"2018-02-20T04:54:03.758Z","v":0}
+{"name":"hexo","hostname":"zss","pid":1509,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-math\u001b[39m","time":"2018-02-20T04:54:03.759Z","v":0}
+{"name":"hexo","hostname":"zss","pid":1509,"level":20,"msg":"Database saved","time":"2018-02-20T04:54:03.765Z","v":0}

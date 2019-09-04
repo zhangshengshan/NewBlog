@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>过拟合的原因 | Zhangshengshan&#39;s Blog</title>
+  <meta name="author" content="Zhang ShengShan">
+  
+  <meta name="description" content="&amp;#x8FC7;&amp;#x62DF;&amp;#x5408;&amp;#x4EA7;&amp;#x751F;&amp;#x539F;&amp;#x56E0;&amp;#x89C2;&amp;#x6D4B;&amp;#x6570;&amp;#x636E;&amp;#x5B58;&amp;#x5728;&amp;#x8BEF;&amp;#x5DEE;&amp;#x7528;&amp;#x4E8E;&amp;#x8BAD;&amp;#x7EC">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="过拟合的原因"/>
+  <meta property="og:site_name" content="Zhangshengshan&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/paper.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+</head>
+
+ <body>  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Zhangshengshan&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 过拟合的原因</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;"><a href="#&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;" class="headerlink" title="&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;"></a>&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;</h1><h2 id="&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;"><a href="#&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;" class="headerlink" title="&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;"></a>&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;</h2><p>&#x7528;&#x4E8E;&#x8BAD;&#x7EC3;&#x7684;&#x6837;&#x672C;&#x6570;&#x636E;&#xFF0C;&#x5373;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x56E0;&#x4E3A;&#x5404;&#x79CD;&#x4E2A;&#x6837;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x603B;&#x4F1A;&#x4EA7;&#x751F;&#x8BEF;&#x5DEE;&#x3002;&#x5982;&#x679C;&#x9009;&#x62E9;&#x7684;&#x5047;&#x8BBE;&#x8FC7;&#x5206;&#x8FFD;&#x6C42;&#x80FD;&#x591F;&#x5B8C;&#x7F8E;&#x89E3;&#x91CA;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#xFF08;&#x5BF9;&#x4E8E;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x62DF;&#x5408;&#x66F2;&#x7EBF;&#x201C;&#x7A7F;&#x8FC7;&#x201D;&#x6240;&#x6709;&#x7684;&#x6837;&#x672C;&#x70B9;&#xFF0C;&#x6216;&#x8005;&#x7C7B;&#x4F3C;&#x4E8E;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x8FC7;&#x5C0F;&#xFF09;&#xFF0C;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x8FC7;&#x62DF;&#x5408;&#x7684;&#x73B0;&#x8C61;&#x3002;&#x9020;&#x6210;&#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x7684;&#x6839;&#x672C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF0C;&#x62DF;&#x5408;&#x66F2;&#x7EBF;&#x628A;&#x8BEF;&#x5DEE;&#x4E5F;&#x5B8C;&#x7F8E;&#x7684;&#x5B66;&#x4E60;&#x4E86;&#x3002;</p>
+<h2 id="&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;"><a href="#&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;" class="headerlink" title="&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;"></a>&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;</h2><p>&#x5F71;&#x54CD;&#x4EA7;&#x751F;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x7684;&#x56E0;&#x7D20;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x73B0;&#x5B9E;&#x4E2D;&#x53EF;&#x80FD;&#x4EC5;&#x63D0;&#x53D6;&#x51E0;&#x4E2A;&#x548C;&#x7ED3;&#x679C;&#x76F8;&#x5173;&#x5EA6;&#x5F88;&#x9AD8;&#x7684;&#x56E0;&#x7D20;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x4F1A;&#x503E;&#x5411;&#x4E8E;&#x56F4;&#x7ED5;&#x4F60;&#x7684;&#x6709;&#x9650;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x5448;&#x6B63;&#x6001;&#x5206;&#x5E03;&#xFF0C;&#x4E8E;&#x662F;&#x4F60;&#x5B9E;&#x9645;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x53D6;&#x6837;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D6;&#x6837;&#x5F88;&#x53EF;&#x80FD;&#x53D7;&#x5230;&#x5176;&#x4F59;&#x56E0;&#x7D20;&#x7684;&#x5F71;&#x54CD;&#x504F;&#x79BB;&#x4F60;&#x7684;&#x6A21;&#x578B;&#x6240;&#x9884;&#x6D4B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4FBF;&#x4E0D;&#x80FD;&#x8D2A;&#x5FC3;&#x4E0D;&#x8DB3;&#x5730;&#x8BD5;&#x56FE;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x6A21;&#x578B;&#x6765;&#x201C;&#x5B8C;&#x7F8E;&#x201D;&#x5339;&#x914D;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x90A3;&#x4E9B;&#x4F7F;&#x7ED3;&#x679C;&#x504F;&#x79BB;&#x4F60;&#x7684;&#x9884;&#x6D4B;&#x7684;&#x8D21;&#x732E;&#x56E0;&#x7D20;&#x4E0D;&#x662F;&#x4F60;&#x8FD9;&#x4E2A;&#x6709;&#x9650;&#x6A21;&#x578B;&#x91CC;&#x9762;&#x542B;&#x6709;&#x7684;&#x56E0;&#x7D20;&#x6240;&#x80FD;&#x6982;&#x62EC;&#x7684;&#xFF0C;&#x786C;&#x8981;&#x6253;&#x80BF;&#x8138;&#x5145;&#x80D6;&#x5B50;&#x53EA;&#x80FD;&#x5BFC;&#x81F4;&#x4E0D;&#x5B9E;&#x9645;&#x7684;&#x6A21;&#x578B;&#x3002;</p>
+<h2 id="&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;"><a href="#&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;" class="headerlink" title="&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;"></a>&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;</h2><p>$$<br>p\left( h|D\right )   = p\left( h\right ) p\left( D|h\right )<br>$$<br>&#x9AD8;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x7684;&#x542B;&#x4E49;&#x662F;&#x5982;&#x679C;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x5047;&#x8BBE;&#x548C;&#x89C2;&#x5BDF;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x5E94;&#x5F53;&#x9009;&#x62E9;&#x6700;&#x7B80;&#x5355;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5047;&#x8BBE;&#x610F;&#x5473;&#x7740;$\left( h\right)$&#x8F83;&#x5927;&#xFF0C;&#x800C;&#x4E0E;&#x89C2;&#x6D4B;&#x4E00;&#x81F4;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4F3C;&#x7136;&#x6570;&#x503C;&#x8F83;&#x5927;&#xFF0C;&#x5373;$p\left( D|h\right )$&#x8F83;&#x5927;&#x3002;</p>
+<p>&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x9752;&#x7750;&#x4E8E;&#x5148;&#x9A8C;&#x6982;&#x7387;&#xFF0C;&#x8BA4;&#x4E3A;&#x5148;&#x9A8C;&#x8F83;&#x5927;&#x7684;&#x6A21;&#x578B;&#x6709;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x52BF;&#xFF1B;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x6CD5;&#x5219;&#x8BA4;&#x4E3A;&#x4F3C;&#x7136;&#x5927;&#x7684;&#x6A21;&#x578B;&#x5177;&#x6709;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x52BF;&#xFF1B;&#x800C;&#x8D1D;&#x53F6;&#x65AF;&#x6CD5;&#x5219;&#x5219;&#x8BA4;&#x4E3A;&#x4E8C;&#x8005;&#x4E58;&#x79EF;&#x51B3;&#x5B9A;&#x6A21;&#x578B;&#x7684;&#x9009;&#x62E9;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;"><a href="#&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;" class="headerlink" title="&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;"></a>&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;</h2><p>&#x4E0A;&#x9762;&#x7684;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x4F20;&#x7EDF;&#x7684;&#x5243;&#x5200;&#x6CD5;&#x5219;&#xFF0C;&#x4E3B;&#x8981;&#x6307;&#x5148;&#x9A8C;&#x6982;&#x7387;$\left( h\right)$,&#x800C;&#x8D1D;&#x53F6;&#x65AF;&#x6CD5;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5176;&#x5B9E;&#x548C;&#x4F3C;&#x7136;$p\left( D|h\right )$&#x4E0A;&#x9762;&#xFF0C;&#x5373;&#x8BE5;&#x6CD5;&#x5219;&#x4E3B;&#x8981;&#x8861;&#x91CF;&#x7684;&#x56E0;&#x7D20;&#x662F;&#x4F3C;&#x7136;&#x672C;&#x8EAB;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x5927;&#x5C0F;&#x3002; </p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/07/13/机器学习相关材料/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/04/25/SPARK的宽依赖和窄依赖/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/07/13/过拟合的原因/" data-title="过拟合的原因" data-url="http://zhangshengshan.github.io/2016/07/13/过拟合的原因/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-07-13 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/MachineLearning/">MachineLearning<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#过拟合产生原因"><span class="toc-article-text">过拟合产生原因</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#观测数据存在误差"><span class="toc-article-text">观测数据存在误差</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#产生样本因素很多，但是实际可能只有小部分提取出来"><span class="toc-article-text">产生样本因素很多，但是实际可能只有小部分提取出来</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#奥卡姆剃刀法则"><span class="toc-article-text">奥卡姆剃刀法则</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#贝叶斯奥卡姆剃刀"><span class="toc-article-text">贝叶斯奥卡姆剃刀</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'zsszss0000' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2019 Zhang ShengShan
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+   </html>

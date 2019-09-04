@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Spark | Zhangshengshan&#39;s Blog</title>
+  <meta name="author" content="Zhang ShengShan">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Zhangshengshan&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/paper.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+</head>
+
+ <body>  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Zhangshengshan&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-category title title-inverse ">Spark</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+
+      <div class="mypage">
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-12-15 </div>
+			<div class="article-title"><a href="/2016/12/15/Spark-Streaming-Programming-Guide/" >Spark Streaming Programming Guide</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-12-09 </div>
+			<div class="article-title"><a href="/2016/12/09/SparkDataFrameLikeSql/" >SparkDataFrameLikeSql</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<p>The idea of spark Datafame may be inspired from dataframe of pandas which is a package of python for structure data processing. On my opinion, dataframe can by prefered by the people with BI(business intelligence) background for high development efficiency.</p>
+<p>DataFrame in Spark could by registered as something which could be considered approximately as a virtual table, therefore anyone who has expierence of SQL could explore the data at quite a low cost of time.</p>
+<p>This article will focus on some dataframe processing method without the help of registering a virtual table and executing SQL, however the corresponding SQL operations such as  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, DESC/ASC, JOIN and GROUPBY TOP will be supplied for a better understanding of dataframe in spark.</p>
+<h2 id="prepare-test-data"><a href="#prepare-test-data" class="headerlink" title="prepare test data"></a>prepare test data</h2><p>Firstly we make a DataFrame object a by reading a json file<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">val sc: SparkContext // An existing SparkContext.</div><div class="line">val sqlContext = new org.apache.spark.sql.SQLContext(sc)</div><div class="line">// this is used to implicitly convert an RDD to a DataFrame.</div><div class="line">import sqlContext.implicits._</div><div class="line">val a = sqlContext.read.json(&quot;people.json&quot;)</div></pre></td></tr></table></figure></p>
+<p>and the content of people.json is as below<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">{&quot;name&quot;:&quot;Michael&quot; , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3000 }</div><div class="line">{&quot;name&quot;:&quot;Dan&quot;     , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3500 }</div><div class="line">{&quot;name&quot;:&quot;Alex&quot;    , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3600 }</div><div class="line">{&quot;name&quot;:&quot;Ben&quot;     , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3700 }</div><div class="line">{&quot;name&quot;:&quot;Andy&quot;    , &quot;age&quot;:30 ,&quot;depart&quot;:&quot;B&quot;,&quot;salary&quot;:4000 }</div><div class="line">{&quot;name&quot;:&quot;Justin&quot;  , &quot;age&quot;:19 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:5000 }</div><div class="line">{&quot;name&quot;:&quot;Jack&quot;    , &quot;age&quot;:19 ,&quot;depart&quot;:&quot;B&quot;,&quot;salary&quot;:2000 }</div></pre></td></tr></table></figure></p>
+<p>let us image a as a Table which is stored in a RDS database such as MySQL.</p>
+<h2 id="desc"><a href="#desc" class="headerlink" title="desc"></a>desc</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">desc people;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">scala&gt; a.printSchema</div><div class="line">root</div><div class="line">|-- age: long (nullable = true)</div><div class="line">|-- depart: string (nullable = true)</div><div class="line">|-- name: string (nullable = true)</div><div class="line">|-- salary: long (nullable = true)</div></pre></td></tr></table></figure>
+<h2 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select name from people;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a.select(&quot;name&quot;).show</div><div class="line">a.select($&quot;name&quot;).show</div><div class="line">a.select(a(&quot;name&quot;)).show</div></pre></td></tr></table></figure>
+<p>the three methods above are equivelent.</p>
+<h2 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select name,age from people where age = 23</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a.select(&quot;name&quot;, &quot;age&quot;).where($&quot;age&quot;===23).show</div><div class="line">a.select(&quot;name&quot;, &quot;age&quot;).filter($&quot;age&quot;===23).show</div></pre></td></tr></table></figure>
+<h2 id="MIN-MAX-SUM-COUNT"><a href="#MIN-MAX-SUM-COUNT" class="headerlink" title="MIN,MAX,SUM,COUNT"></a>MIN,MAX,SUM,COUNT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select min(age), max(age), sum(salary), count(age) from people</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a.select(min(&quot;age&quot;),max(&quot;age&quot;),sum(&quot;salary&quot;),count(&quot;age&quot;)).show</div><div class="line">a.agg(min(&quot;age&quot;),max(&quot;age&quot;),sum(&quot;salary&quot;),count(&quot;age&quot;)).show</div></pre></td></tr></table></figure>
+<p>and the result is<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">+--------+--------+-----------+----------+</div><div class="line">|min(age)|max(age)|sum(salary)|count(age)|</div><div class="line">+--------+--------+-----------+----------+</div><div class="line">|      19|      30|      24800|         7|</div><div class="line">+--------+--------+-----------+----------+</div></pre></td></tr></table></figure></p>
+<h2 id="COUNT-DISTINCT"><a href="#COUNT-DISTINCT" class="headerlink" title="COUNT DISTINCT"></a>COUNT DISTINCT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select count (distinct age) , count ( distinct name ) from people</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a.select(count(&quot;age&quot;),countDistinct(&quot;age&quot;)).show</div><div class="line">a.agg(count(&quot;age&quot;), countDistinct(&quot;name&quot;)).show</div></pre></td></tr></table></figure>
+<p>and the result is<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+-------------------+--------------------+</div><div class="line">|count(DISTINCT age)|count(DISTINCT name)|</div><div class="line">+-------------------+--------------------+</div><div class="line">|                  7|                   3|</div><div class="line">+-------------------+--------------------+</div></pre></td></tr></table></figure></p>
+<h2 id="ORDERBY-desc"><a href="#ORDERBY-desc" class="headerlink" title="ORDERBY desc"></a>ORDERBY desc</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from people orderby age desc, name desc</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a.sort($&quot;age&quot;.desc,$&quot;name&quot;.desc).show</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">+---+------+-------+------+</div><div class="line">|age|depart|   name|salary|</div><div class="line">+---+------+-------+------+</div><div class="line">| 30|     B|   Andy|  4000|</div><div class="line">| 23|     A|Michael|  3000|</div><div class="line">| 23|     A|    Dan|  3500|</div><div class="line">| 23|     A|    Ben|  3700|</div><div class="line">| 23|     A|   Alex|  3600|</div><div class="line">| 19|     A| Justin|  5000|</div><div class="line">| 19|     B|   Jack|  2000|</div><div class="line">+---+------+-------+------+</div></pre></td></tr></table></figure>
+<h2 id="inner-join-left-outer-join-and-convert-null-to-a-default-value"><a href="#inner-join-left-outer-join-and-convert-null-to-a-default-value" class="headerlink" title="inner join, left outer join and convert null to a default value"></a>inner join, left outer join and convert null to a default value</h2><p>first we make another dataframe based on a<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">val c = a.filter(not ($&quot;age&quot;===23))</div><div class="line"></div><div class="line">scala&gt; c.show</div><div class="line">+---+------+------+------+</div><div class="line">|age|depart|  name|salary|</div><div class="line">+---+------+------+------+</div><div class="line">| 30|     B|  Andy|  4000|</div><div class="line">| 19|     A|Justin|  5000|</div><div class="line">| 19|     B|  Jack|  2000|</div><div class="line">+---+------+------+------+</div></pre></td></tr></table></figure></p>
+<p>now we try to join a and c </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">select </div><div class="line">    a.age as a_age,</div><div class="line">    if(c.age is null, 0, c.age) as c_age,</div><div class="line">    a.depart as a_depart</div><div class="line">from </div><div class="line">    a</div><div class="line">left outer join</div><div class="line">    c</div><div class="line">on </div><div class="line">    a.age = c.age</div></pre></td></tr></table></figure>
+<p>the cording dataframe form is<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">scala&gt; a.join(c,a(&quot;age&quot;)===c(&quot;age&quot;),&quot;left&quot;).select(a(&quot;age&quot;).alias(&quot;a_age&quot;),c(&quot;age&quot;).alias(&quot;c_age&quot;),a(&quot;depart&quot;).alias(&quot;a_depart&quot;)).na.fill(0,Seq(&quot;c_age&quot;)).show</div><div class="line">+-----+-----+--------+</div><div class="line">|a_age|c_age|a_depart|</div><div class="line">+-----+-----+--------+</div><div class="line">|   23|    0|       A|</div><div class="line">|   23|    0|       A|</div><div class="line">|   23|    0|       A|</div><div class="line">|   23|    0|       A|</div><div class="line">|   30|   30|       B|</div><div class="line">|   19|   19|       A|</div><div class="line">|   19|   19|       A|</div><div class="line">|   19|   19|       B|</div><div class="line">|   19|   19|       B|</div><div class="line">+-----+-----+--------+</div></pre></td></tr></table></figure></p>
+<p>what if those records whose c.age is null is execluded<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">select </div><div class="line">    a.age as a_age,</div><div class="line">    if(c.age is null, 0, c.age) as c_age,</div><div class="line">    a.depart as a_depart</div><div class="line">from </div><div class="line">    a</div><div class="line">left outer join</div><div class="line">    c</div><div class="line">on </div><div class="line">    a.age = c.age</div><div class="line">where </div><div class="line">    c.age is not null</div></pre></td></tr></table></figure></p>
+<p>the na.drop method provided this function<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">scala&gt; a.join(c,a(&quot;age&quot;)===c(&quot;age&quot;),&quot;left&quot;).select(a(&quot;age&quot;).alias(&quot;a_age&quot;),c(&quot;age&quot;).alias(&quot;c_age&quot;),a(&quot;depart&quot;).alias(&quot;a_depart&quot;)).na.drop.show</div><div class="line">+-----+-----+--------+</div><div class="line">|a_age|c_age|a_depart|</div><div class="line">+-----+-----+--------+</div><div class="line">|   30|   30|       B|</div><div class="line">|   19|   19|       A|</div><div class="line">|   19|   19|       A|</div><div class="line">|   19|   19|       B|</div><div class="line">|   19|   19|       B|</div><div class="line">+-----+-----+--------+</div></pre></td></tr></table></figure></p>
+<h2 id="Top-N-for-group"><a href="#Top-N-for-group" class="headerlink" title="Top N for group"></a>Top N for group</h2><p>use window operation can help<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">import org.apache.spark.sql.expressions.Window</div><div class="line">val w = Window.partitionBy($&quot;depart&quot;)</div><div class="line">import org.apache.spark.sql.expressions.Window</div><div class="line">val rankAsc = row_number().over(w.orderBy($&quot;salary&quot;)).alias(&quot;rank_asc&quot;)</div><div class="line">val rankDesc = row_number().over(w.orderBy($&quot;salary&quot;.desc)).alias(&quot;rank_desc&quot;)</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">scala&gt; a.select($&quot;*&quot;, rankAsc, rankDesc).filter($&quot;rank_asc&quot;&lt;3 || $&quot;rank_desc&quot; &gt;= 2).show</div><div class="line">+---+------+-------+------+--------+---------+</div><div class="line">|age|depart|   name|salary|rank_asc|rank_desc|</div><div class="line">+---+------+-------+------+--------+---------+</div><div class="line">| 30|     B|   Andy|  4000|       2|        1|</div><div class="line">| 19|     B|   Jack|  2000|       1|        2|</div><div class="line">| 23|     A|    Ben|  3700|       4|        2|</div><div class="line">| 23|     A|   Alex|  3600|       3|        3|</div><div class="line">| 23|     A|    Dan|  3500|       2|        4|</div><div class="line">| 23|     A|Michael|  3000|       1|        5|</div><div class="line">+---+------+-------+------+--------+---------+</div><div class="line">scala&gt; a.select($&quot;*&quot;, rankAsc, rankDesc).filter($&quot;rank_asc&quot;&lt;3 &amp;&amp; $&quot;rank_desc&quot; &gt;= 2).show</div><div class="line">+---+------+-------+------+--------+---------+</div><div class="line">|age|depart|   name|salary|rank_asc|rank_desc|</div><div class="line">+---+------+-------+------+--------+---------+</div><div class="line">| 19|     B|   Jack|  2000|       1|        2|</div><div class="line">| 23|     A|    Dan|  3500|       2|        4|</div><div class="line">| 23|     A|Michael|  3000|       1|        5|</div><div class="line">+---+------+-------+------+--------+---------+</div></pre></td></tr></table></figure>
+<p>what&#x2019;s more, it is clearly <code>select *</code> in SQL could by implemented by <code>select($&quot;*&quot;)</code></p>
+
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-12-05 </div>
+			<div class="article-title"><a href="/2016/12/05/save-spark-rdd-into-Mysql/" >save spark rdd into Mysql</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import java.util.Properties</div><div class="line">val target_df = targetRdd.toDF()</div><div class="line">val prop = new Properties()</div><div class="line">prop.put(&quot;user&quot;, &quot;username&quot;)</div><div class="line">prop.put(&quot;password&quot;, &quot;password&quot;)</div><div class="line">ret_df.write.mode(&quot;append&quot;).jdbc(&quot;jdbc:mysql://host:port/database&quot;,&quot;table&quot;,prop)</div></pre></td></tr></table></figure>
+
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-11-28 </div>
+			<div class="article-title"><a href="/2016/11/28/SparkStreamLearning/" >SparkStreamLearning</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="input-source"><a href="#input-source" class="headerlink" title="input source"></a>input source</h1><p>kafka<br>akka</p>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><p>redis<br>kafka<br>elasticSearch<br>hive<br>mySql</p>
+
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-19 </div>
+			<div class="article-title"><a href="/2016/08/19/Spark-2-0-Introduction/" >Spark 2.0 Introduction</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="Spark-2-0-MLib-Introduction"><a href="#Spark-2-0-MLib-Introduction" class="headerlink" title="Spark 2.0 MLib Introduction"></a>Spark 2.0 MLib Introduction</h1><p>As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered maintenance mode. The primary Machine Learning API for Spark is now the DataFrame-based API in the spark.ml package.</p>
+<p>Spark2.0 ,&#x5728;spark.mllib&#x4E2D;&#x7684;&#x57FA;&#x4E8E;RDD&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;APIs&#x5C06;&#x4F1A;&#x8FDB;&#x5165;&#x7EF4;&#x62A4;&#x6A21;&#x5F0F;&#x3002;&#x73B0;&#x5728;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x4E3B;&#x8981;&#x7684;API&#x57FA;&#x4E8E;DataFrame,&#x4F4D;&#x4E8E;spark.ml&#x4E2D;&#x3002;</p>
+<p>What are the implications?</p>
+<pre><code>MLlib will still support the RDD-based API in spark.mllib with bug fixes.
+MLlib will not add new features to the RDD-based API.
+In the Spark 2.x releases, MLlib will add features to the DataFrames-based API to reach feature parity with the RDD-based API.
+After reaching feature parity (roughly estimated for Spark 2.2), the RDD-based API will be deprecated.
+The RDD-based API is expected to be removed in Spark 3.0.
+</code></pre><p>Why is MLlib switching to the DataFrame-based API?</p>
+<pre><code>DataFrames provide a more user-friendly API than RDDs. The many benefits of DataFrames include Spark Datasources, SQL/DataFrame queries, Tungsten and Catalyst optimizations, and uniform APIs across languages.
+The DataFrame-based API for MLlib provides a uniform API across ML algorithms and across multiple languages.
+DataFrames facilitate practical ML Pipelines, particularly feature transformations. See the Pipelines guide for details.
+</code></pre>
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-19 </div>
+			<div class="article-title"><a href="/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/" >Save DataFrame into a partitioned table of HIVE</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table"><a href="#How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table" class="headerlink" title="How to save a spark DataFrame as a patitioned hive table"></a>How to save a spark DataFrame as a patitioned hive table</h1><h2 id="utilise-saveAsTable-method"><a href="#utilise-saveAsTable-method" class="headerlink" title="utilise saveAsTable method"></a>utilise saveAsTable method</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">val conf = new SparkConf().setAppName(&quot;Simple Application&quot;).setMaster(&quot;local&quot;)</div><div class="line">val sc = new SparkContext(conf)</div><div class="line">val sqlContext = new org.apache.spark.sql.SQLContext(sc)</div><div class="line">import sqlContext.implicits._</div><div class="line">val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)</div><div class="line">hiveContext.sql(&quot;use database&quot;)</div><div class="line"></div><div class="line">val cmd =</div><div class="line">  &quot;&quot;&quot;</div><div class="line">     select</div><div class="line">      col1,</div><div class="line">      col2</div><div class="line">     from</div><div class="line">      table</div><div class="line">  &quot;&quot;&quot;.stripMargin</div><div class="line">val yourDf = hiveContext.sql(cmd)</div><div class="line">yourDf.printSchema()</div><div class="line">yourDf.write.partitionBy(&quot;col2&quot;).saveAsTable(&quot;partitionTableName&quot;)</div></pre></td></tr></table></figure>
+
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-11 </div>
+			<div class="article-title"><a href="/2016/08/11/SparkPassFunctions/" >SparkPassFunctions</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">class MyClass {</div><div class="line">  val field = &quot;Hello&quot;</div><div class="line">  def doStuff(rdd: RDD[String]): RDD[String] = {</div><div class="line">  val field_ = this.field</div><div class="line">  rdd.map(x =&gt; field_ + x)}</div><div class="line">}</div></pre></td></tr></table></figure>
+
+	
+	</div>
+</div>
+
+	  
+	    	
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-25 </div>
+			<div class="article-title"><a href="/2016/04/25/SPARK的宽依赖和窄依赖/" >SPARK的宽依赖和窄依赖</a></div>						
+		</h3>
+	
+
+
+	    	<div class="entry">
+  <div class="row">
+	
+	
+		<p>spark &#x7684;&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;transformation&#x64CD;&#x4F5C;,&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x662F;&#x5426;&#x4F9D;&#x8D56;&#x7236;RDDs&#x7684;&#x6240;&#x6709;partision&#x5206;&#x4E3A;&#x2018;&#x7A84;&#x4F9D;&#x8D56;&#x2019;&#x548C;&#x2018;&#x5BBD;&#x4F9D;&#x8D56;&#x2019;,&#x7B80;&#x5355;&#x7684;&#x8BF4;,&#x6709;shuffle&#x64CD;&#x4F5C;&#x7684;&#x5C31;&#x662F;&#x5BBD;&#x4F9D;&#x8D56;,&#x800C;&#x6CA1;&#x6709;shuffle&#x64CD;&#x4F5C;&#x7684;&#x5C31;&#x662F;&#x7A84;&#x4F9D;&#x8D56;&#x3002;<br>&#x5BF9;&#x4E8E;&#x7A84;&#x4F9D;&#x8D56;,spark&#x4F1A;&#x5C3D;&#x91CF;&#x5C06;&#x4ED6;&#x4EEC;&#x5212;&#x5206;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;stage,&#x800C;&#x5BBD;&#x4F9D;&#x8D56;&#x5219;&#x4F1A;&#x79F0;&#x4E3A;&#x53E6;&#x5916;&#x7684;stage&#x3002;</p>
+
+	
+	</div>
+</div>
+
+	  
+      </div>
+	  <div>
+	    <center>
+	    <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+        </center>
+	    </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+	<div class="widget">
+		<h4>Categories</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/C-C/">C/C++<span>4</span></a></li>
+		
+			<li><a href="/categories/Demo/">Demo<span>1</span></a></li>
+		
+			<li><a href="/categories/Docs/">Docs<span>4</span></a></li>
+		
+			<li><a href="/categories/Linux/">Linux<span>1</span></a></li>
+		
+			<li><a href="/categories/MachineLearning/">MachineLearning<span>2</span></a></li>
+		
+			<li><a href="/categories/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/categories/Scala/">Scala<span>2</span></a></li>
+		
+			<li><a href="/categories/Spark/">Spark<span>8</span></a></li>
+		
+			<li><a href="/categories/Test/">Test<span>3</span></a></li>
+		
+			<li><a href="/categories/VIM/">VIM<span>1</span></a></li>
+		
+			<li><a href="/categories/tensorflow/">tensorflow<span>2</span></a></li>
+		
+			<li><a href="/categories/学习/">学习<span>2</span></a></li>
+		
+		</ul>
+	</div>
+
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/CNN/">CNN<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala/">Scala<span>8</span></a></li>
+		
+			<li><a href="/tags/JVM/">JVM<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
+			<li><a href="/tags/GIT/">GIT<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/plugins/">plugins<span>2</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+			<li><a href="/tags/Q-A/">Q&amp;A<span>2</span></a></li>
+		
+			<li><a href="/tags/Tensorflow/">Tensorflow<span>1</span></a></li>
+		
+			<li><a href="/tags/简体/">简体<span>1</span></a></li>
+		
+			<li><a href="/tags/Socket/">Socket<span>1</span></a></li>
+		
+			<li><a href="/tags/scala/">scala<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
+		
+			<li><a href="/tags/tensorflow/">tensorflow<span>3</span></a></li>
+		
+			<li><a href="/tags/Spark/">Spark<span>5</span></a></li>
+		
+			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
+		
+			<li><a href="/tags/JVM-GC/">JVM,GC<span>1</span></a></li>
+		
+			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
+		
+			<li><a href="/tags/SVM/">SVM<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>31</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2019/09/04/gradel2maven/" ><i class="fa fa-file-o"></i>gradel2maven</a>
+      </li>
+    
+      <li>
+        <a href="/2019/08/06/ScalaTest/" ><i class="fa fa-file-o"></i>ScalaTest</a>
+      </li>
+    
+      <li>
+        <a href="/2019/07/25/通俗语言解释Monad-1/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
+      </li>
+    
+      <li>
+        <a href="/2019/07/25/通俗语言解释Monad/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
+      </li>
+    
+      <li>
+        <a href="/2019/07/10/FpInScala读书笔记/" ><i class="fa fa-file-o"></i>FpInScala读书笔记</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/zhangshengshan" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/hahack" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2019 Zhang ShengShan
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+   </html>
