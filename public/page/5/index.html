@@ -112,6 +112,29 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-12-21 </div>
+			<div class="article-title"><a href="/2016/12/21/UVa455/" >UVa455</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>inspired by my wife, and i got the code below<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdlib.h&gt;</div><div class="line">#include &lt;stdio.h&gt;</div><div class="line">#include &lt;strings.h&gt;</div><div class="line">int main ( int argc, char *argv[] )</div><div class="line">{</div><div class="line">    char buf[81];</div><div class="line">    int i = 0;</div><div class="line">    memset(buf,0,sizeof(buf));</div><div class="line">    while(scanf(&quot;%s&quot;,buf)!=EOF){</div><div class="line">        for(i=1;i&lt;strlen(buf);i++){</div><div class="line">            if ( strlen(buf)%i==0 ){</div><div class="line">                if (strncmp(buf,buf+i,strlen(buf)-i)==0) {</div><div class="line">                    printf ( &quot; k is %d\n&quot;,i );</div><div class="line">                    break;</div><div class="line">                }</div><div class="line">            }</div><div class="line">        }</div><div class="line">        if(i==strlen(buf)){</div><div class="line">            printf ( &quot;k is %d\n&quot;,i );</div><div class="line">        }</div><div class="line">        memset(buf,0,sizeof(buf));</div><div class="line">    }</div><div class="line">    return EXIT_SUCCESS;</div></pre></td></tr></table></figure></p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-12-21 </div>
 			<div class="article-title"><a href="/2016/12/21/UVa1225/" >UVa1225</a></div>						
 		</h3>
 	
@@ -419,28 +442,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-08-22 </div>
-			<div class="article-title"><a href="/2016/08/22/Spark-Window-Operation/" >Spark Window Operation </a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		
-	
-	</div>
-</div>
-
-           
-		
 
 		</div>
 
@@ -522,45 +523,45 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/maven-gradle/">maven gradle<span>1</span></a></li>
+			<li><a href="/tags/GIT/">GIT<span>1</span></a></li>
 		
-			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
 		
-			<li><a href="/tags/maven/">maven<span>1</span></a></li>
-		
-			<li><a href="/tags/ML/">ML<span>1</span></a></li>
-		
-			<li><a href="/tags/plugins/">plugins<span>2</span></a></li>
+			<li><a href="/tags/Flink/">Flink<span>1</span></a></li>
 		
 			<li><a href="/tags/Spark/">Spark<span>5</span></a></li>
+		
+			<li><a href="/tags/data/">data<span>1</span></a></li>
+		
+			<li><a href="/tags/CNN/">CNN<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
+		
+			<li><a href="/tags/基础/">基础<span>1</span></a></li>
+		
+			<li><a href="/tags/plugins/">plugins<span>2</span></a></li>
 		
 			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
 		
 			<li><a href="/tags/JVM/">JVM<span>1</span></a></li>
 		
-			<li><a href="/tags/GIT/">GIT<span>1</span></a></li>
-		
-			<li><a href="/tags/Tensorflow/">Tensorflow<span>1</span></a></li>
-		
-			<li><a href="/tags/CNN/">CNN<span>1</span></a></li>
-		
-			<li><a href="/tags/Q-A/">Q&amp;A<span>2</span></a></li>
-		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
-		
 			<li><a href="/tags/简体/">简体<span>1</span></a></li>
-		
-			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
 		
 			<li><a href="/tags/tensorflow/">tensorflow<span>3</span></a></li>
 		
+			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+			<li><a href="/tags/maven-gradle/">maven gradle<span>1</span></a></li>
+		
+			<li><a href="/tags/maven/">maven<span>1</span></a></li>
+		
+			<li><a href="/tags/ML/">ML<span>1</span></a></li>
+		
 			<li><a href="/tags/JVM-GC/">JVM,GC<span>1</span></a></li>
 		
-			<li><a href="/tags/SVM/">SVM<span>1</span></a></li>
+			<li><a href="/tags/English/">English<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>31</span></a></li>
@@ -576,6 +577,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2019/09/24/JavaComments/" ><i class="fa fa-file-o"></i>JavaComments</a>
+      </li>
+    
+      <li>
         <a href="/2019/09/04/gradel2maven/" ><i class="fa fa-file-o"></i>gradel2maven</a>
       </li>
     
@@ -589,10 +594,6 @@
     
       <li>
         <a href="/2019/07/25/通俗语言解释Monad/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
-      </li>
-    
-      <li>
-        <a href="/2019/07/10/FpInScala读书笔记/" ><i class="fa fa-file-o"></i>FpInScala读书笔记</a>
       </li>
     
   </ul>
@@ -662,22 +663,7 @@
 	 }
 	 var path = "/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
+   </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
    </html>
