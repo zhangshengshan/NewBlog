@@ -111,6 +111,36 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-12-28 </div>
+			<div class="article-title"><a href="/2016/12/28/install-tensorflow/" >install tensorflow</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>anaconda &#x63D0;&#x4F9B;&#x4E86;python&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x4E3A;&#x5404;&#x79CD;python&#x8F6F;&#x4EF6;&#x5305;&#x5B89;&#x88C5;&#x548C;&#x7BA1;&#x7406;&#x63D0;&#x4F9B;&#x4E86;&#x904D;&#x5386;&#xFF0C;&#x6309;&#x7167;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7684;&#x65B9;&#x5F0F;&#x5373;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;tensorflow. </p>
+<h2 id="&#x521B;&#x5EFA;tensorflow&#x7684;&#x865A;&#x62DF;&#x73AF;&#x5883;"><a href="#&#x521B;&#x5EFA;tensorflow&#x7684;&#x865A;&#x62DF;&#x73AF;&#x5883;" class="headerlink" title="&#x521B;&#x5EFA;tensorflow&#x7684;&#x865A;&#x62DF;&#x73AF;&#x5883;"></a>&#x521B;&#x5EFA;tensorflow&#x7684;&#x865A;&#x62DF;&#x73AF;&#x5883;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create -n tensorflow python=3.5</div></pre></td></tr></table></figure>
+<h2 id="&#x5B89;&#x88C5;tensorflow"><a href="#&#x5B89;&#x88C5;tensorflow" class="headerlink" title="&#x5B89;&#x88C5;tensorflow"></a>&#x5B89;&#x88C5;tensorflow</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ source activate tensorflow</div><div class="line">(tensorflow)$  # Your prompt should change</div><div class="line"></div><div class="line"># Linux/Mac OS X, Python 2.7/3.4/3.5, CPU only:</div><div class="line">(tensorflow)$ conda install -c conda-forge tensorflow</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x7F51;&#x7EDC;&#x72B6;&#x51B5;&#x4E0D;&#x597D;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x91C7;&#x7528;pip&#x5B89;&#x88C5;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ source activate tensorflow</div><div class="line">(tensorflow)$  # Your prompt should change</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0-py3-none-any.whl</div></pre></td></tr></table></figure>
+<p><strong>&#x8BF7;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x91C7;&#x7528;pip3&#x5B89;&#x88C5;&#xFF0C;&#x56E0;&#x4E3A;anaconda&#x73AF;&#x5883;&#x4E2D;pip3&#x5B89;&#x88C5;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install --ignore-installed --upgrade $TF_BINARY_URL</div></pre></td></tr></table></figure></p>
+<h2 id="&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;"><a href="#&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;" class="headerlink" title="&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;"></a>&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import tensorflow as tf</div><div class="line">print(tf.__versioin__)</div></pre></td></tr></table></figure>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-12-22 </div>
 			<div class="article-title"><a href="/2016/12/22/vim使用技巧/" >vim使用技巧</a></div>						
 		</h3>
@@ -420,33 +450,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-11-10 </div>
-			<div class="article-title"><a href="/2016/11/10/MAC访问你DOCKER容器中的WEB页面/" >MAC访问你DOCKER容器中的WEB页面</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>docker run -d -p hostport:dockerport &#x2013;name your_container_name  your_image_name nginx -g &#x201C;daemon off;&#x201D;</p>
-<p>the above instruction start a docker nginx application which bind is port dockerport to its host port hostport.<br>usually you can access the nginx service on your host environment by curl the hostport, however in MacOs, ths hostport here<br>is the virtual machine. so when you curl localhost:hostport, you will get no response.</p>
-<p>the right way is access the virtual machine responding port. so the ip of virtual machine is needed.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker-machine ip your_virtual_machine</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl the ip you get:hostport</div></pre></td></tr></table></figure>
-
-	
-	</div>
-</div>
-
-           
-		
 
 		</div>
 
@@ -528,45 +531,45 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
 			<li><a href="/tags/highlight/">highlight<span>1</span></a></li>
 		
-			<li><a href="/tags/Tensorflow/">Tensorflow<span>1</span></a></li>
-		
-			<li><a href="/tags/plugins/">plugins<span>2</span></a></li>
-		
-			<li><a href="/tags/Scala/">Scala<span>8</span></a></li>
-		
-			<li><a href="/tags/ML/">ML<span>1</span></a></li>
-		
-			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
-		
-			<li><a href="/tags/JVM-GC/">JVM,GC<span>1</span></a></li>
-		
-			<li><a href="/tags/JVM/">JVM<span>1</span></a></li>
-		
-			<li><a href="/tags/Socket/">Socket<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/繁體/">繁體<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
+			<li><a href="/tags/简体/">简体<span>1</span></a></li>
 		
 			<li><a href="/tags/Q-A/">Q&amp;A<span>2</span></a></li>
 		
-			<li><a href="/tags/Spark/">Spark<span>5</span></a></li>
+			<li><a href="/tags/plugins/">plugins<span>2</span></a></li>
 		
-			<li><a href="/tags/maven/">maven<span>1</span></a></li>
+			<li><a href="/tags/繁體/">繁體<span>1</span></a></li>
 		
-			<li><a href="/tags/基础/">基础<span>1</span></a></li>
+			<li><a href="/tags/git/">git<span>1</span></a></li>
 		
-			<li><a href="/tags/tensorflow/">tensorflow<span>3</span></a></li>
+			<li><a href="/tags/GIT/">GIT<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/data/">data<span>1</span></a></li>
+		
+			<li><a href="/tags/Flink/">Flink<span>1</span></a></li>
+		
+			<li><a href="/tags/JVM/">JVM<span>1</span></a></li>
 		
 			<li><a href="/tags/scala/">scala<span>1</span></a></li>
 		
-			<li><a href="/tags/data/">data<span>1</span></a></li>
+			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
+		
+			<li><a href="/tags/基础/">基础<span>1</span></a></li>
+		
+			<li><a href="/tags/ML/">ML<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark/">Spark<span>5</span></a></li>
+		
+			<li><a href="/tags/SVM/">SVM<span>1</span></a></li>
+		
+			<li><a href="/tags/Tensorflow/">Tensorflow<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>31</span></a></li>
@@ -582,6 +585,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2019/11/13/财务造假/" ><i class="fa fa-file-o"></i>财务造假</a>
+      </li>
+    
+      <li>
         <a href="/2019/09/27/如何判断一个项目或者一个需求的价值/" ><i class="fa fa-file-o"></i>如何判断一个项目或者一个需求的价值</a>
       </li>
     
@@ -595,10 +602,6 @@
     
       <li>
         <a href="/2019/08/06/ScalaTest/" ><i class="fa fa-file-o"></i>ScalaTest</a>
-      </li>
-    
-      <li>
-        <a href="/2019/07/25/通俗语言解释Monad-1/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
       </li>
     
   </ul>

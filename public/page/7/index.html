@@ -111,6 +111,33 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-07-13 </div>
+			<div class="article-title"><a href="/2016/07/13/过拟合的原因/" >过拟合的原因</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;"><a href="#&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;" class="headerlink" title="&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;"></a>&#x8FC7;&#x62DF;&#x5408;&#x4EA7;&#x751F;&#x539F;&#x56E0;</h1><h2 id="&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;"><a href="#&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;" class="headerlink" title="&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;"></a>&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x5B58;&#x5728;&#x8BEF;&#x5DEE;</h2><p>&#x7528;&#x4E8E;&#x8BAD;&#x7EC3;&#x7684;&#x6837;&#x672C;&#x6570;&#x636E;&#xFF0C;&#x5373;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x56E0;&#x4E3A;&#x5404;&#x79CD;&#x4E2A;&#x6837;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x603B;&#x4F1A;&#x4EA7;&#x751F;&#x8BEF;&#x5DEE;&#x3002;&#x5982;&#x679C;&#x9009;&#x62E9;&#x7684;&#x5047;&#x8BBE;&#x8FC7;&#x5206;&#x8FFD;&#x6C42;&#x80FD;&#x591F;&#x5B8C;&#x7F8E;&#x89E3;&#x91CA;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#xFF08;&#x5BF9;&#x4E8E;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x62DF;&#x5408;&#x66F2;&#x7EBF;&#x201C;&#x7A7F;&#x8FC7;&#x201D;&#x6240;&#x6709;&#x7684;&#x6837;&#x672C;&#x70B9;&#xFF0C;&#x6216;&#x8005;&#x7C7B;&#x4F3C;&#x4E8E;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x8FC7;&#x5C0F;&#xFF09;&#xFF0C;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x8FC7;&#x62DF;&#x5408;&#x7684;&#x73B0;&#x8C61;&#x3002;&#x9020;&#x6210;&#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x7684;&#x6839;&#x672C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF0C;&#x62DF;&#x5408;&#x66F2;&#x7EBF;&#x628A;&#x8BEF;&#x5DEE;&#x4E5F;&#x5B8C;&#x7F8E;&#x7684;&#x5B66;&#x4E60;&#x4E86;&#x3002;</p>
+<h2 id="&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;"><a href="#&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;" class="headerlink" title="&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;"></a>&#x4EA7;&#x751F;&#x6837;&#x672C;&#x56E0;&#x7D20;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x5C0F;&#x90E8;&#x5206;&#x63D0;&#x53D6;&#x51FA;&#x6765;</h2><p>&#x5F71;&#x54CD;&#x4EA7;&#x751F;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x7684;&#x56E0;&#x7D20;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x73B0;&#x5B9E;&#x4E2D;&#x53EF;&#x80FD;&#x4EC5;&#x63D0;&#x53D6;&#x51E0;&#x4E2A;&#x548C;&#x7ED3;&#x679C;&#x76F8;&#x5173;&#x5EA6;&#x5F88;&#x9AD8;&#x7684;&#x56E0;&#x7D20;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x4F1A;&#x503E;&#x5411;&#x4E8E;&#x56F4;&#x7ED5;&#x4F60;&#x7684;&#x6709;&#x9650;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x5448;&#x6B63;&#x6001;&#x5206;&#x5E03;&#xFF0C;&#x4E8E;&#x662F;&#x4F60;&#x5B9E;&#x9645;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x53D6;&#x6837;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D6;&#x6837;&#x5F88;&#x53EF;&#x80FD;&#x53D7;&#x5230;&#x5176;&#x4F59;&#x56E0;&#x7D20;&#x7684;&#x5F71;&#x54CD;&#x504F;&#x79BB;&#x4F60;&#x7684;&#x6A21;&#x578B;&#x6240;&#x9884;&#x6D4B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4FBF;&#x4E0D;&#x80FD;&#x8D2A;&#x5FC3;&#x4E0D;&#x8DB3;&#x5730;&#x8BD5;&#x56FE;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x6A21;&#x578B;&#x6765;&#x201C;&#x5B8C;&#x7F8E;&#x201D;&#x5339;&#x914D;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x90A3;&#x4E9B;&#x4F7F;&#x7ED3;&#x679C;&#x504F;&#x79BB;&#x4F60;&#x7684;&#x9884;&#x6D4B;&#x7684;&#x8D21;&#x732E;&#x56E0;&#x7D20;&#x4E0D;&#x662F;&#x4F60;&#x8FD9;&#x4E2A;&#x6709;&#x9650;&#x6A21;&#x578B;&#x91CC;&#x9762;&#x542B;&#x6709;&#x7684;&#x56E0;&#x7D20;&#x6240;&#x80FD;&#x6982;&#x62EC;&#x7684;&#xFF0C;&#x786C;&#x8981;&#x6253;&#x80BF;&#x8138;&#x5145;&#x80D6;&#x5B50;&#x53EA;&#x80FD;&#x5BFC;&#x81F4;&#x4E0D;&#x5B9E;&#x9645;&#x7684;&#x6A21;&#x578B;&#x3002;</p>
+<h2 id="&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;"><a href="#&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;" class="headerlink" title="&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;"></a>&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;</h2><p>$$<br>p\left( h|D\right )   = p\left( h\right ) p\left( D|h\right )<br>$$<br>&#x9AD8;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x7684;&#x542B;&#x4E49;&#x662F;&#x5982;&#x679C;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x5047;&#x8BBE;&#x548C;&#x89C2;&#x5BDF;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x5E94;&#x5F53;&#x9009;&#x62E9;&#x6700;&#x7B80;&#x5355;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5047;&#x8BBE;&#x610F;&#x5473;&#x7740;$\left( h\right)$&#x8F83;&#x5927;&#xFF0C;&#x800C;&#x4E0E;&#x89C2;&#x6D4B;&#x4E00;&#x81F4;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4F3C;&#x7136;&#x6570;&#x503C;&#x8F83;&#x5927;&#xFF0C;&#x5373;$p\left( D|h\right )$&#x8F83;&#x5927;&#x3002;</p>
+<p>&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x9752;&#x7750;&#x4E8E;&#x5148;&#x9A8C;&#x6982;&#x7387;&#xFF0C;&#x8BA4;&#x4E3A;&#x5148;&#x9A8C;&#x8F83;&#x5927;&#x7684;&#x6A21;&#x578B;&#x6709;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x52BF;&#xFF1B;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x6CD5;&#x5219;&#x8BA4;&#x4E3A;&#x4F3C;&#x7136;&#x5927;&#x7684;&#x6A21;&#x578B;&#x5177;&#x6709;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x52BF;&#xFF1B;&#x800C;&#x8D1D;&#x53F6;&#x65AF;&#x6CD5;&#x5219;&#x5219;&#x8BA4;&#x4E3A;&#x4E8C;&#x8005;&#x4E58;&#x79EF;&#x51B3;&#x5B9A;&#x6A21;&#x578B;&#x7684;&#x9009;&#x62E9;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;"><a href="#&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;" class="headerlink" title="&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;"></a>&#x8D1D;&#x53F6;&#x65AF;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;</h2><p>&#x4E0A;&#x9762;&#x7684;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5219;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x4F20;&#x7EDF;&#x7684;&#x5243;&#x5200;&#x6CD5;&#x5219;&#xFF0C;&#x4E3B;&#x8981;&#x6307;&#x5148;&#x9A8C;&#x6982;&#x7387;$\left( h\right)$,&#x800C;&#x8D1D;&#x53F6;&#x65AF;&#x6CD5;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x6CD5;&#x5176;&#x5B9E;&#x548C;&#x4F3C;&#x7136;$p\left( D|h\right )$&#x4E0A;&#x9762;&#xFF0C;&#x5373;&#x8BE5;&#x6CD5;&#x5219;&#x4E3B;&#x8981;&#x8861;&#x91CF;&#x7684;&#x56E0;&#x7D20;&#x662F;&#x4F3C;&#x7136;&#x672C;&#x8EAB;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x5927;&#x5C0F;&#x3002; </p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-04-25 </div>
 			<div class="article-title"><a href="/2016/04/25/SPARK的宽依赖和窄依赖/" >SPARK的宽依赖和窄依赖</a></div>						
 		</h3>
@@ -334,38 +361,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-12-25 </div>
-			<div class="article-title"><a href="/2013/12/25/simplified-chinese-test/" title="观音心经 - 般若波罗蜜多心经。">简体中文测试</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-           
-              <div class="thumbnail"><a href="/2013/12/25/simplified-chinese-test/"><img src="/hexo-theme-freemind/images/xinjing/pusa2.jpg" alt="简体中文测试"  class="nofancybox"></a>
-           
-		</div>
-	
-	
-		<p>观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。</p>
-<p>舍利子，色不异空，空不异色；色即是空，空即是色。受、想、行、识，亦复如是。</p>
-<p>舍利子，是诸法空相，不生不灭，不垢不净，不增不减，是故空中无色，无受、想、行、识；无眼、耳、鼻、舌、身、意；无色、声、香、味、触、法；无眼界，乃至无意识界；无无明，亦无无明尽；乃至无老死，亦无老死尽。无苦、集、灭、道，无智亦无得，以无所得故。</p>
-<p>菩提萨埵(<code>duǒ</code>)，依般若波罗蜜多故，心无罣碍(<code>guà ài</code>)。无罣碍，故无有恐怖，远离颠倒梦想，究竟涅盘。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="/2013/12/25/simplified-chinese-test/#more" class="btn btn-default more">Read More</a>
-	
-	</div>
-</div>
-
-           
-		
 
 		</div>
 
@@ -382,7 +377,7 @@
         <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
 		
-          <li class="next disabled"><a>Next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/page/8/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -447,45 +442,45 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/English/">English<span>1</span></a></li>
-		
-			<li><a href="/tags/简体/">简体<span>1</span></a></li>
-		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
-		
-			<li><a href="/tags/繁體/">繁體<span>1</span></a></li>
-		
-			<li><a href="/tags/tensorflow/">tensorflow<span>3</span></a></li>
-		
-			<li><a href="/tags/基础/">基础<span>1</span></a></li>
-		
 			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/Socket/">Socket<span>1</span></a></li>
-		
-			<li><a href="/tags/SVM/">SVM<span>1</span></a></li>
 		
 			<li><a href="/tags/maven/">maven<span>1</span></a></li>
 		
-			<li><a href="/tags/Scala-并发编程/">Scala, 并发编程<span>1</span></a></li>
+			<li><a href="/tags/maven-gradle/">maven gradle<span>1</span></a></li>
 		
-			<li><a href="/tags/data/">data<span>1</span></a></li>
+			<li><a href="/tags/git/">git<span>1</span></a></li>
 		
-			<li><a href="/tags/Scala/">Scala<span>8</span></a></li>
+			<li><a href="/tags/ML/">ML<span>1</span></a></li>
 		
-			<li><a href="/tags/highlight/">highlight<span>1</span></a></li>
-		
-			<li><a href="/tags/scala/">scala<span>1</span></a></li>
+			<li><a href="/tags/简体/">简体<span>1</span></a></li>
 		
 			<li><a href="/tags/JVM-GC/">JVM,GC<span>1</span></a></li>
 		
-			<li><a href="/tags/Flink/">Flink<span>1</span></a></li>
+			<li><a href="/tags/GIT/">GIT<span>1</span></a></li>
 		
-			<li><a href="/tags/CNN/">CNN<span>1</span></a></li>
+			<li><a href="/tags/SVM/">SVM<span>1</span></a></li>
 		
-			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
+			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
+		
+			<li><a href="/tags/JVM/">JVM<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark/">Spark<span>5</span></a></li>
+		
+			<li><a href="/tags/tensorflow/">tensorflow<span>3</span></a></li>
+		
+			<li><a href="/tags/data/">data<span>1</span></a></li>
 		
 			<li><a href="/tags/Q-A/">Q&amp;A<span>2</span></a></li>
+		
+			<li><a href="/tags/Flink/">Flink<span>1</span></a></li>
+		
+			<li><a href="/tags/基础/">基础<span>1</span></a></li>
+		
+			<li><a href="/tags/highlight/">highlight<span>1</span></a></li>
+		
+			<li><a href="/tags/Socket/">Socket<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>31</span></a></li>
@@ -501,6 +496,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2019/11/13/财务造假/" ><i class="fa fa-file-o"></i>财务造假</a>
+      </li>
+    
+      <li>
         <a href="/2019/09/27/如何判断一个项目或者一个需求的价值/" ><i class="fa fa-file-o"></i>如何判断一个项目或者一个需求的价值</a>
       </li>
     
@@ -514,10 +513,6 @@
     
       <li>
         <a href="/2019/08/06/ScalaTest/" ><i class="fa fa-file-o"></i>ScalaTest</a>
-      </li>
-    
-      <li>
-        <a href="/2019/07/25/通俗语言解释Monad-1/" ><i class="fa fa-file-o"></i>通俗语言解释Monad</a>
       </li>
     
   </ul>

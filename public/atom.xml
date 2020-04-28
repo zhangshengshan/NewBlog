@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2019-09-27T05:11:37.678Z</updated>
+  <updated>2019-11-13T04:22:04.116Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>财务造假</title>
+    <link href="http://zhangshengshan.github.io/2019/11/13/%E8%B4%A2%E5%8A%A1%E9%80%A0%E5%81%87/"/>
+    <id>http://zhangshengshan.github.io/2019/11/13/财务造假/</id>
+    <published>2019-11-13T04:21:15.000Z</published>
+    <updated>2019-11-13T04:22:04.116Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="text"><a href="#text" class="headerlink" title="text"></a>text</h1><p><a href="https://www.zhihu.com/search?type=content&amp;q=%E8%B4%A2%E5%8A%A1%E9%80%A0%E5%81%87" target="_blank" rel="external">https://www.zhihu.com/search?type=content&amp;q=%E8%B4%A2%E5%8A%A1%E9%80%A0%E5%81%87</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;text&quot;&gt;&lt;a href=&quot;#text&quot; class=&quot;headerlink&quot; title=&quot;text&quot;&gt;&lt;/a&gt;text&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/search?type=content&amp;amp;q=%E8%B
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>如何判断一个项目或者一个需求的价值</title>
@@ -545,25 +564,6 @@
     
     
       <category term="GIT" scheme="http://zhangshengshan.github.io/tags/GIT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LDA现行判别分析</title>
-    <link href="http://zhangshengshan.github.io/2018/03/21/LDA%E7%8E%B0%E8%A1%8C%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90/"/>
-    <id>http://zhangshengshan.github.io/2018/03/21/LDA现行判别分析/</id>
-    <published>2018-03-21T06:09:46.000Z</published>
-    <updated>2018-03-22T06:06:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/27899927?group_id=869893271453863936" target="_blank" rel="external">&#x53C2;&#x8003;&#x6587;&#x7AE0;</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27899927?group_id=869893271453863936&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x7AE
-    
-    </summary>
-    
     
   </entry>
   
