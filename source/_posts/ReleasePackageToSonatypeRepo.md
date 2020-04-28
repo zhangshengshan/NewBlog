@@ -8,6 +8,7 @@ tags: maven
 # maven工程构件发布到Maven中央仓库
 
 [参考文档](http://central.sonatype.org/pages/apache-maven.html#gpg-signed-components)
+
 pom.xml 示例
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -187,3 +188,13 @@ publishTo := {
 }
 publishArtifact in Test:= false
 ```
+
+
+
+# 参考文档
+- https://www.devdungeon.com/content/publish-java-packages-maven-central-repository
+- https://central.sonatype.org/pages/sbt.html
+- https://central.sonatype.org/pages/apache-maven.html#deploying-to-ossrh-with-apache-maven-introduction
+
+git@github.com:zhangshengshan/myflinkLearning.git
+
