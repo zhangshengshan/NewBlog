@@ -16,3 +16,10 @@ tags:
 - LeetCode[**705**] 
 - LeetCode[**849**] 
 - LeetCode[**1071**] 
+- LeetCode[**1175**] 
+
+- LeetCode[**142**] 
+- LeetCode[**206**] 
+- LeetCode[**817**]
+- LeetCode[**162**]
+- LeetCode[**34**]
